@@ -55,3 +55,4 @@ gem install bundler
 10. Download and install rails: gem install rails
 11. Navigate into the newly cloned directory and run 'bundle'
 12. Start the rails server by running 'rails s'
+13. To access the files shared between your vagrant box and windows, navigate to the directory where you created your new vagrant box and within the folders, you should be able to access the repo. You can then edit the files in windows with your favorite IDE and this will be updated in the vagrant box.
