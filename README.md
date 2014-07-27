@@ -46,7 +46,15 @@ rbenv install 2.0.0-p247
 
 rbenv global 2.0.0-p247
 
+sudo apt-get install curl
+
+\curl -L https://get.rvm.io | bash -s stable
+
+source ~/.rvm/scripts/rvm
+
 cd /vagrant/
+
+rvm rubygems current
 
 gem install bundler
 
