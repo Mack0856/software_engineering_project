@@ -20,21 +20,21 @@ Setting up your development environment
    - Username: vagrant
    - Password: vagrant
 8. You will now need to install all the dependencies required to develop.
-   - Copy the following lines into the ssh instance running:
-sudo apt-get update
-sudo apt-get install build-essential zlib1g-dev git-core sqlite3 libsqlite3-dev
-cd
-git clone git://github.com/sstephenson/rbenv.git .rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-source .bash_profile
-git clone https://github.com/sstephenson/ruby-build.git
-cd ruby-build
-sudo ./install.sh
-rbenv install 2.0.0-p247
-rbenv global 2.0.0-p247
-cd /vagrant/
-gem install bundler
+   - Copy the following lines into the ssh instance running:\n
+sudo apt-get update\n
+sudo apt-get install build-essential zlib1g-dev git-core sqlite3 libsqlite3-dev\n
+cd\n
+git clone git://github.com/sstephenson/rbenv.git .rbenv\n
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile\n
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile\n
+source .bash_profile\n
+git clone https://github.com/sstephenson/ruby-build.git\n
+cd ruby-build\n
+sudo ./install.sh\n
+rbenv install 2.0.0-p247\n
+rbenv global 2.0.0-p247\n
+cd /vagrant/\n
+gem install bundler\n
 9. Create a new projects folder within the vagrant folder located in root.
 10. Clone the repo into your newly created folder. git clone https://github.com/Mack0856/software_engineering_project.git
 10. Download and install rails: gem install rails
