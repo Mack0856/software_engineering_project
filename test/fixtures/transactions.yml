@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sk_song: MyString
+  date: 2014-10-11
+  cost: 1
+
+two:
+  sk_song: MyString
+  date: 2014-10-11
+  cost: 1

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  artist: MyString
+  album: MyString
+  year: 1
+  genre: MyString
+  last_played: 2014-10-11
+  last_download: 2014-10-11
+  total_plays: 1
+  total_downloads: 1
+  song_path: MyString
+
+two:
+  title: MyString
+  artist: MyString
+  album: MyString
+  year: 1
+  genre: MyString
+  last_played: 2014-10-11
+  last_download: 2014-10-11
+  total_plays: 1
+  total_downloads: 1
+  song_path: MyString

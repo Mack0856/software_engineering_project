@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total_cost: 1
+  date_payable: 2014-10-11
+  status: false
+
+two:
+  total_cost: 1
+  date_payable: 2014-10-11
+  status: false
