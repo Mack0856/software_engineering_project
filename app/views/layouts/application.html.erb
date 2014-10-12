@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SoftwareEngineeringProject</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+
+  	<title>HelloMusic</title>
+
 </head>
-<body>
+<body style="padding-top: 70px;">
 
-HOPPAAAAAA
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  		<div class="container">
 
-  sign the eff up!
-  <%= link_to 'users/new' %>
+	        <a class="navbar-brand" href="#">HelloMusic</a>
+
+    		 <ul class="nav navbar-nav navbar-right">
+		        <li class="dropdown" id="menuLogin">
+		            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
+		            <div class="dropdown-menu" style="padding:17px;">
+		              <form class="form" id="formLogin"> 
+		                <input name="username" id="username" type="text" placeholder="Username"> 
+		                <input name="password" id="password" type="password" placeholder="Password"><br>
+		                <button type="button" id="btnLogin" class="btn">Login</button>
+		              </form>
+		            </div>
+         		 </li>
+     		    <li>
+     		    	<a href="#">Register</a>
+ 		    	</li>
+		      </ul>
+  		</div>
+	</nav>
+
+	<div class="container">
+
+      <div class="jumbotron">
+        <h1>HelloMusic Store</h1>
+        <p>A fun place to hangout and liten to some great music!</p>
+       
+      </div>
+
+    </div> <!-- /container -->
 </body>
 </html>
