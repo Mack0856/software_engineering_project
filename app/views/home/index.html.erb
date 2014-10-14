@@ -42,31 +42,3 @@
       </div>
 
     </div> <!-- /container -->
-
-    <script> 
-
-      $(function() {
-      
-        // Setup drop down menu
-        $('.dropdown-toggle').dropdown();
-     
-        // Fix input element click problem
-        $('.dropdown input, .dropdown label').click(function(e) {
-          e.stopPropagation();
-        });
-
-        $('.bnt btn-default sign-in').click(function(e) {
-          alert("HOSH!!!");
-          $.ajax({
-            type: "POST",
-            url: "/login",
-            data: {
-              email: $('#user').val(),
-              password: $('#password').val()
-            }
-          })
-        })
-      
-      });
-
-    </script>
