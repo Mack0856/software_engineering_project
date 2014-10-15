@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/', to: 'home#index'
   get '/home', to: 'home#home'
+  get '/home/landing', to: 'home#landing'
+  get '/home/music', to: 'home#music'
   post '/login', to: 'login#login'
 
   # The priority is based upon order of creation: first created -> highest priority.

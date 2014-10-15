@@ -6,9 +6,9 @@
   <a class="navbar-brand active" href="#">HelloMusic</a>
 
   <ul class="nav navbar-nav">
-    <li class=""><a href="#">Music</a></li>
-    <li class=""><a href="#">Trenidng</a></li>
-    <li class=""><a href="#">Stats</a></li>
+    <li class=""><a id="navMusic" href="#">Music</a></li>
+    <li class=""><a id="navNews" href="#">News</a></li>
+    <li class=""><a id="navStats" href="#">Stats</a></li>
   </ul>
 
   <ul class="nav pull-right" style="padding-right:30px;">
@@ -32,26 +32,25 @@
 </nav>
 
 <div id="mainContainer" class="container">
-
-     
-
-</div> <!-- /main container -->
+</div>
 
 <script>
-  
-$(onloadCallback);
 
-function onloadCallback(){
+$("#navMusic").on('click',function(){
 
-  $('#mainContainer').load( "home/landing.html.erb" );
-}
+  $('#mainContainer').load( "home/music" ,function(){
+    
+    //$.getScript("js/productHelper.js"); 
+    //$('#results').load( "songs" );
+
+  });
+
+});
+
+$( document ).ready(function() {
+
+  $('#mainContainer').load( "home/landing" );
+
+});
 
 </script>
-
-
-
-
-
-
-
-
