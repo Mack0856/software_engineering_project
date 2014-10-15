@@ -3,7 +3,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
 
-  <a class="navbar-brand active" href="#">HelloMusic</a>
+  <a id="navHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
 
   <ul class="nav navbar-nav">
     <li class=""><a id="navMusic" href="#">Music</a></li>
@@ -35,6 +35,14 @@
 </div>
 
 <script>
+
+$("#navHelloMusic").on('click',function(){
+
+  $('#mainContainer').load( "home/landing" ,function(){
+    
+  });
+
+});
 
 $("#navMusic").on('click',function(){
 
