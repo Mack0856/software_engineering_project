@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141011124956) do
+ActiveRecord::Schema.define(version: 20141013192326) do
 
   create_table "invoices", force: true do |t|
     t.integer  "total_cost"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20141011124956) do
     t.string   "date_of_birth"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "permissions"
   end
 
 end
