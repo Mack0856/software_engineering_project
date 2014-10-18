@@ -1,4 +1,11 @@
-(function(){
+// Filename: views/project/list
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'text!templates/Sidebar/SidebarRightTemplate.html'
+], function($, _, Backbone, SidebarRightTemplate){
+
   var SidebarRight = Backbone.View.extend({
     
     el: $('#sidebarRight'),
@@ -12,4 +19,4 @@
   });
 
   return SidebarRight;
-})()
+});
