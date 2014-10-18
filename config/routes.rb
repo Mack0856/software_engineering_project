@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/index', to: 'index#index'
   get '/', to: 'home#index'
   get '/home', to: 'home#home'
   get '/home/landing', to: 'home#landing'

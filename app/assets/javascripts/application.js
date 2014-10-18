@@ -11,7 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require require.js
+//= require underscore.js
+//= require backbone.js
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 //= require functionality.js
+//= require main.js
+//= require app.js

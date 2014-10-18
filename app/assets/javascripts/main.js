@@ -5,18 +5,9 @@
 require.config({
   paths: {
     jquery: 	'Library/Jquery/jquery-1.11.1.min',
-    underscore: 'Library/Underscore/underscore',
-    backbone: 	'Library/Backbone/backbone',
     saucySlider:'Library/SaucySlider/saucySlider'
   },
    shim: {
-    underscore: {
-      exports: '_'
-    },
-    backbone: {
-      deps: ["underscore", "jquery"],
-      exports: "Backbone"
-    },
     saucySlider: {
       deps: ["jquery"]
     }

@@ -1,10 +1,4 @@
-// Filename: views/project/list
-define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'text!templates/Login/loginTemplate.html'
-], function($, _, Backbone, LoginTemplate){
+(function(){
 
   var Login = Backbone.View.extend({
     
@@ -19,4 +13,4 @@ define([
   });
 
   return Login;
-});
+})()

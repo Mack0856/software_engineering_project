@@ -1,10 +1,4 @@
-define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'text!templates/Header/headerTemplate.html'
-], function($, _, Backbone, headerTemplate){
-  
+(function(){
   var Header = Backbone.View.extend({
 
     events:{
@@ -40,7 +34,5 @@ define([
 
 
   });
-
-
-  return Header;
-});
+return Header;
+  })()
