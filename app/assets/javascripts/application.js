@@ -16,3 +16,4 @@
 //= require_tree .
 //= require functionality.js
 //= require admin.js
+//= require bootstrap.js
