@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
 $('button[data-nav="admin-reports"]').click(function(){
-
-	alert('Reports');
+	window.location = 'admin/reports';
 })
 
 
