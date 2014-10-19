@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get '/home/music', to: 'home#music'
 
   get '/admin/', to: 'admin#index'
-
+  get '/admin/manage_songs', to: 'admin#manage_songs'
+  get '/admin/reports', to: 'admin#reports'
 
   post '/login', to: 'login#login'
 
