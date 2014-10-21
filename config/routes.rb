@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   resources :users
 
-  get '/', to: 'home#index'
+  get '/', to: 'home#index' #This one must change to #index i think.
+
   get '/home', to: 'home#home'
   get '/home/landing', to: 'home#landing'
   get '/home/music', to: 'home#music'
