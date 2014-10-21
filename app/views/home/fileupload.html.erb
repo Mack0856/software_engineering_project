@@ -1,0 +1,27 @@
+<h1>YAY!</h1>
+<input type="file" name="test_upload"/ >
+
+<label data-submit="test">submit</label>
+
+<script>
+
+$(function(){
+
+$('label[data-submit="test"]').on('click',function(){
+  $.ajax({
+        type: "POST",
+        url: "/login",
+        data: {
+          file : $('input[name="test_upload"]')[0].files[0]
+        },
+        statusCode: {
+          200: function(status){
+            console.log(status);
+          }
+        }
+      })
+})
+
+})
+
+</script>

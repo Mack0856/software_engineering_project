@@ -1,27 +1,53 @@
-<h1>YAY!</h1>
-<input type="file" name="test_upload"/ >
+<% @body_class = 'index' %>
 
-<label data-submit="test">submit</label>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <a id="brandHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
+
+    <ul class="nav navbar-nav">
+      <li class=""><a id="navMusic" href="#">Music</a></li>
+      <li class=""><a id="navNews" href="#">News</a></li>
+      <li class=""><a id="navStats" href="#">Stats</a></li>
+    </ul>
+
+    <ul class="nav pull-right" style="padding-right:30px; padding-top:8px;">
+      <li><button id="btnLogout" class="btn btn-default" >Logout</button></li>
+    </ul>
+        
+    </div><!-- /.navbar-inner -->
+
+  </div><!-- /.navbar -->
+</nav>
+
+<div id="mainContainer" class="container">
+</div>
 
 <script>
 
-$(function(){
+  $( document ).ready(function() {
 
-$('label[data-submit="test"]').on('click',function(){
-  $.ajax({
-        type: "POST",
-        url: "/login",
-        data: {
-          file : $('input[name="test_upload"]')[0].files[0]
-        },
-        statusCode: {
-          200: function(status){
-            console.log(status);
-          }
-        }
-      })
-})
+    $("#brandHelloMusic").on('click',function(){
+      $('#mainContainer').load( "home/welcome" );
+    });
 
-})
+    $("#navMusic").on('click',function(){
+
+      $('#mainContainer').load( "home/music" );
+
+    });
+
+    $("#btnLogout").on('click',function(){
+      window.location.replace("/");
+    });
+
+    $('#mainContainer').load( "home/welcome" );
+
+  });
+
+  
+
+
 
 </script>

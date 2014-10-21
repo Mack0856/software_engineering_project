@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/', to: 'home#index' #This one must change to #index i think.
 
   get '/home', to: 'home#home'
+  get '/home/welcome', to: 'home#welcome'
   get '/home/landing', to: 'home#landing'
   get '/home/music', to: 'home#music'
 

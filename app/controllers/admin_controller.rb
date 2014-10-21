@@ -5,8 +5,7 @@ class AdminController < ActionController::Base
   def index
 	render layout: 'layouts/application.html.erb'
   end
-
-   def reports
+  def reports
 	render layout: 'layouts/application.html.erb'
   end
 end
