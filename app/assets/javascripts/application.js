@@ -19,5 +19,7 @@
 //= require_tree .
 //= require functionality.js
 //= require bootstrap.js
+//= require saucySlider.js
 //= require admin.js
 //= require landing.js
+//= require home.js

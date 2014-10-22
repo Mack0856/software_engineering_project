@@ -1,21 +1,15 @@
-/*$( document ).ready(function() {
-
-  $('#mainContainer').load( "home/landing" );
-
-  $("#btnToggleLoginDropDown").on('click', function(){  
-    
-    if ( $("#divLoginDropdown").hasClass("open") ) {
-      $("#divLoginDropdown").removeClass("open");
-    } else {
-      $("#divLoginDropdown").addClass("open");
-    }
-
-  });
-
-  $("#btnLogin").on('click', function(){
-    window.location.replace("/home");
-    //alert("http://localhost:3000/home");
-  });
-
-});// /.ON READY */
+$( document ).ready(function() {
+  if($('#stage').length > 0){
+    $('#stage').ready(function(){
+        $('#home').saucySlider({
+                        pager: $('.pagers li'),
+                        nextButton: $('.right'),
+                        prevButton: $('.left'),
+                        scenePoints: [0, 2500, 5000],
+                        sceneTimes: [1000, 1000, 1000]
+                      //  sceneNames: ['First', 'Second', 'Third']
+                      });
+    });
+}
+});
 

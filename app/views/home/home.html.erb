@@ -1,6 +1,6 @@
 <% @body_class = 'index' %>
-
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="row">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
   <div class="container">
 
@@ -20,8 +20,32 @@
 
   </div><!-- /.navbar -->
 </nav>
+</div>
 
-<div id="mainContainer" class="container">
+<div class='row' id="home">
+  <div class="col-xs-1">
+    <div id="sidebarLeft">
+      <label class="left" >Left</label>
+    </div>
+  </div>
+  <div class="col-xs-10">
+    <div id="stage">
+      <div id="loginAbout" class="jumbotron" data-scene="0" data-layer="0">
+        <h1>Hello, world! 1 </h1>
+      </div>
+      <div  id="loginWelcome" class="jumbotron"  data-scene="1" data-layer="0">
+        <h1>Hello, world! 2 </h1>
+      </div>
+      <div id="loginExtra" class="jumbotron" data-scene="2" data-layer="0">
+        <h1>Hello, world! 3 </h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-1">
+    <div id="sidebarRight">
+      <label  class="right" >Right</label>
+    </div>
+  </div>
 </div>
 
 <script>

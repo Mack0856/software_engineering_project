@@ -1,0 +1,60 @@
+/* STATIC  */
+html::-webkit-scrollbar { 
+    display: none; 
+}
+
+#sidebarLeft{
+  position:absolute;
+  left:50px;
+  top:450px;
+}
+
+#sidebarLeft label{
+  background-size: contain;
+  background-image:url('/assets/leftA.gif') ;
+  width: 60px;
+  height: 60px;
+}
+
+#sidebarRight{
+  position:absolute;
+  top:450px;
+  right:50px;
+}
+
+#sidebarRight label{
+  background-size: contain;
+  background-image:url('/assets/rightA.gif') ;
+  width: 60px;
+  height: 60px;
+}
+
+#page{
+}
+
+
+/* LOGIN SCREEN */
+
+#loginAbout{
+  position:absolute;
+  top:300px;
+  left:-250px;
+  width: 600px;
+  height:500px;
+}
+
+#loginWelcome{
+  position:absolute;
+  top:300px;
+  left:2250px;
+  width: 600px;
+  height:500px;
+}
+
+#loginExtra{
+  position:absolute;
+  top:300px;
+  left:4550px;
+  width: 600px;
+  height:500px;
+}
