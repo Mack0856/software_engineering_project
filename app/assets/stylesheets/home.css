@@ -1,0 +1,103 @@
+/* STATIC  */
+html::-webkit-scrollbar { 
+    display: none; 
+}
+#home{
+  position:relative;
+  left:0px;
+  margin:0px;
+}
+#sidebarLeft{
+  position:absolute;
+  left:50px;
+  top:450px;
+  z-index:999;
+}
+
+#sidebarLeft label{
+  background-size: contain;
+  background-image:url('/assets/leftA.gif') ;
+  width: 60px;
+  height: 60px;
+  z-index:999;
+}
+
+#sidebarRight{
+  position:absolute;
+  top:450px;
+  right:50px;
+  z-index:999;
+}
+
+#sidebarRight label{
+  background-size: contain;
+  background-image:url('/assets/rightA.gif') ;
+  width: 60px;
+  height: 60px;
+  z-index:999;
+}
+
+
+
+/* LOGIN SCREEN */
+#home{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+
+#stage{
+  position:absolute;
+  left:0px;
+  width:inherit;
+  margin:inherit;
+}
+
+
+#loginAbout{
+  position: fixed;
+  left: -921px;
+  /*background-color: BLUE;*/
+  background-image: url('/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2251px;
+  height: 969px;
+  top: 50px;
+}
+
+#loginWelcome{
+  position: fixed;
+  left: 1330px;
+  /*background-color: RED;*/
+  background-image: url('/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2748px;
+  height: 969px;
+  top: 50px;
+}
+
+#loginExtra{
+  position: fixed;
+  /*background-color: GREEN;*/
+  background-image: url('/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 50px;
+  left: 4079px;
+  width: 1842px;
+  height: 969px;
+}
+
+#player{
+  /*position:absolute;*/
+  /*background-color: RED;
+  width:auto;
+  height:150px;
+  left:100px;
+  /*bottom:100px;*/
+  z-index:999;
+  
+}

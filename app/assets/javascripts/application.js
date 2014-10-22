@@ -14,12 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-ui
+
+
+//= require jquery.transform2d.js
+//= require jquery.grab
+//= require jquery.jplayer.min.js
+//= require modenizer
+//= require jquery.circle-player.js
+
 //= require video
 //= require bigvideo
-//= require_tree .
+//= require_tree
 //= require functionality.js
 //= require bootstrap.js
 //= require saucySlider.js
+
+//= require jplayer.playlist.min.js
+
 //= require admin.js
 //= require landing.js
 //= require home.js

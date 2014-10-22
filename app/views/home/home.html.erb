@@ -20,33 +20,61 @@
 
   </div><!-- /.navbar -->
 </nav>
-</div>
 
-<div class='row' id="home">
-  <div class="col-xs-1">
-    <div id="sidebarLeft">
-      <label class="left" >Left</label>
-    </div>
+<!-- SCREENS -->
+</div>
+  <div class="container">
+    <div id="home" class="col-xs-12">
+       <div id="sidebarLeft">
+        <label class="left" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      </div>
+      <div id="stage">
+        <div id="loginAbout" data-scene="0" data-layer="0">
+          <div class="container">
+          </div>
+        </div>
+        <div  id="loginWelcome"  data-scene="1" data-layer="0">
+          <div class="container">
+          </div>
+        </div>
+        <div id="loginExtra"  data-scene="2" data-layer="0">
+          <div class="container">
+          </div>
+        </div>
+      </div>
+       <div id="sidebarRight">
+        <label  class="right" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      </div>
   </div>
-  <div class="col-xs-10">
-    <div id="stage">
-      <div id="loginAbout" class="jumbotron" data-scene="0" data-layer="0">
-        <h1>Hello, world! 1 </h1>
+  <!-- PLAYER -->
+<div id="player">
+  <div id="jquery_jplayer_1" class="cp-jplayer"></div>
+  <div class="prototype-wrapper"> <!-- A wrapper to emulate use in a webpage and center align -->
+    <!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+    <div id="cp_container_1" class="cp-container">
+      <div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+        <div class="cp-buffer-1"></div>
+        <div class="cp-buffer-2"></div>
       </div>
-      <div  id="loginWelcome" class="jumbotron"  data-scene="1" data-layer="0">
-        <h1>Hello, world! 2 </h1>
+      <div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+        <div class="cp-progress-1"></div>
+        <div class="cp-progress-2"></div>
       </div>
-      <div id="loginExtra" class="jumbotron" data-scene="2" data-layer="0">
-        <h1>Hello, world! 3 </h1>
-      </div>
-    </div>
-  </div>
-  <div class="col-xs-1">
-    <div id="sidebarRight">
-      <label  class="right" >Right</label>
+      <div class="cp-circle-control"></div>
+      <ul class="cp-controls">
+        <li><a class="cp-play" tabindex="1">play</a></li>
+        <li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+      </ul>
     </div>
   </div>
 </div>
+<!-- PLAYER END-->
+</div>
+<!-- SCREENS END -->
+
+
+
+
 
 <script>
 

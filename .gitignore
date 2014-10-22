@@ -14,3 +14,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+app/assets/images/test.mp3
+app/assets/images/test2.mp3
