@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-ui
+//= require video
+//= require bigvideo
 //= require_tree .
 //= require functionality.js
-//= require admin.js
 //= require bootstrap.js
+//= require admin.js
+//= require landing.js

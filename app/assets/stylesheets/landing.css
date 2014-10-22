@@ -1,0 +1,23 @@
+#landingContent{
+	position:relative;
+	height:100%;
+	width:100%;
+}
+#landing_header{
+	position:relative;
+	height:100%;
+	width:100%;
+	z-index:99;
+}
+
+#landing_video {
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+#landing_video video{
+	position:fixed;
+	height:100%;
+	width:100%;
+}
