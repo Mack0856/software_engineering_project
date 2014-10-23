@@ -14,6 +14,9 @@
  *= require_self
  *= require_bootstrap
  *= require_bootstrap-theme
+ *= require_normalize
+ *= require_demo
+ *= require_component
  *= require_bigvideo
  *= require_landing
  *= require_home

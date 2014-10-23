@@ -1,7 +1,18 @@
 /* STATIC  */
+ @font-face { font-family: BlueJulyB; src: url('/assets/bluejuly.ttf'); } 
+
+#brandHelloMusic{
+  font-family: BlueJulyB;
+  font-size: 33px;
+}
+
 html::-webkit-scrollbar { 
     display: none; 
 }
+.nav-fillpath{
+  z-index:999;
+}
+
 #home{
   position:relative;
   left:0px;
@@ -15,11 +26,15 @@ html::-webkit-scrollbar {
 }
 
 #sidebarLeft label{
+  position: fixed;
+  left: 15px;
   background-size: contain;
   background-image:url('/assets/leftA.gif') ;
   width: 60px;
   height: 60px;
   z-index:999;
+
+
 }
 
 #sidebarRight{
@@ -30,6 +45,8 @@ html::-webkit-scrollbar {
 }
 
 #sidebarRight label{
+  position: fixed;
+  right: 15px;
   background-size: contain;
   background-image:url('/assets/rightA.gif') ;
   width: 60px;
@@ -59,7 +76,7 @@ html::-webkit-scrollbar {
   position: fixed;
   left: -921px;
   /*background-color: BLUE;*/
-  background-image: url('/assets/background.jpg');
+  background-image: url('/assets/pic1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 2251px;
@@ -71,7 +88,7 @@ html::-webkit-scrollbar {
   position: fixed;
   left: 1330px;
   /*background-color: RED;*/
-  background-image: url('/assets/background.jpg');
+  background-image: url('/assets/pic2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 2748px;
@@ -82,7 +99,7 @@ html::-webkit-scrollbar {
 #loginExtra{
   position: fixed;
   /*background-color: GREEN;*/
-  background-image: url('/assets/background.jpg');
+  background-image: url('/assets/pic3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   top: 50px;
@@ -92,12 +109,5 @@ html::-webkit-scrollbar {
 }
 
 #player{
-  /*position:absolute;*/
-  /*background-color: RED;
-  width:auto;
-  height:150px;
-  left:100px;
-  /*bottom:100px;*/
-  z-index:999;
   
 }
