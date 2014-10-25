@@ -25,7 +25,6 @@
 //= require video
 //= require bigvideo
 //= require_tree
-//= require functionality.js
 //= require bootstrap.js
 //= require saucySlider.js
 
