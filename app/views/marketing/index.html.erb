@@ -37,11 +37,14 @@
 <div class="row">
   <div id="footer" class="container">
 </div>
+
+<%= render partial: 'landing' %>
+<%= render partial: 'signup' %>
 <script>
   
   $( document ).ready(function() {
 
-    $('#mainContainer').load( "marketing/landing" );
+    // $('#mainContainer').load( "marketing/landing" );
 
     $("#btnToggleLoginDropDown").on('click', function(){  
       
