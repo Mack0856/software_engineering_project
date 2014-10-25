@@ -17,7 +17,8 @@
 }
 
 #landing_video video{
-	position:fixed;
-	height:100%;
-	width:100%;
-}
+	position: fixed;
+	height: 1300px;
+	left: -200px;
+	width: 2270px;
+	}
