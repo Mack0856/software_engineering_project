@@ -46,3 +46,11 @@
   text-shadow: black 0.3em 0.3em 0.3em;
   background:transparent;
 }
+#gradient{
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	width: 101%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+}
