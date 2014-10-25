@@ -1,35 +1,34 @@
-$(document).ready(function(event){
+$(document).ready(function(){
 
-	  event.stopPropagation();
 
-	    $("#btnToggleLoginDropDown").on('click', function(){  
-      
-      if ( $("#divLoginDropdown").hasClass("open") ) {
-        $("#divLoginDropdown").removeClass("open");
-      } else {
-        $("#divLoginDropdown").addClass("open");
-      }
-
-    });
+	    $("#btnToggleLoginDropDown").on('click', function(event){  
+        event.stopPropagation();      
+        if ( $("#divLoginDropdown").hasClass("open") ) {
+          $("#divLoginDropdown").removeClass("open");
+        } else {
+          $("#divLoginDropdown").addClass("open");
+        }
+      });
 
     $("#btnLogin").on('click', function(){
 
-      $.ajax({
-      type: "POST",
-      url: "/login",
-      data: {
-        email: $('#user').val(),
-        password: $('#password').val()   
-      },
-      statusCode: {
-        200: function(status){
-          window.location = '/home'
-        },          
-        401: function(){
-        	alert(401);
+      ajax_call = $.ajax({
+        type: "POST",
+        url: "/login",
+        data: {
+          email: $('#user').val(),
+          password: $('#password').val()   
+        },
+        statusCode: {
+          200:function(response){
+            window.location = "/home?user_i="+response.id+"";
+          },
+          403:function(response){
+            alert("Incorrect email or password");
+          }
         }
-      }
-    })
+      })
+     
     });
 
 // 	if($('#landing_video').length>0){
