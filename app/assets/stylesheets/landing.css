@@ -17,8 +17,23 @@
 }
 
 #landing_video video{
-position: fixed;
-height: 1039px;
-left: -155px;
-width: 2155px;
-	}
+	position: fixed;
+	height: 1039px;
+	left: -155px;
+	width: 2155px;
+}
+
+#landing_signup{
+	position: fixed;
+	z-index: 1000;
+	color:WHITE;
+/* 	background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(255, 255, 255, 1)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 0, 0, 0)', endColorstr='rgba(0, 0, 0, 0)', GradientType=1);
+    padding: 2rem 0;*/
+}

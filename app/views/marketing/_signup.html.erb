@@ -1,49 +1,49 @@
-<%= form_tag(controller: "home", action: "register") do |f| %>
+<div id="landing_signup">
   <div class="field">
-    <%= label_tag :password %><br>
-    <%= text_field_tag :password %>
+    <label>Password</label>
+    <input type="text" data-sign="password">
   </div>
   <div class="field">
-    <%= label_tag :email %><br>
-    <%= text_field_tag :email %>
+    <label>Email</label>
+    <input type="text" data-sign="email">
   </div>
   <div class="field">
-    <%= label_tag :address_line_1 %><br>
-    <%= text_field_tag :address_line_1 %>
+    <label>Address Line 1</label>
+    <input type="text" data-sign="address_line_1">
   </div>
   <div class="field">
-    <%= label_tag :address_line_2 %><br>
-    <%= text_field_tag :address_line_2 %>
+    <label>Address line 2</label>
+    <input type="text" data-sign="address_line_2">
   </div>
   <div class="field">
-    <%= label_tag :address_line_3 %><br>
-    <%= text_field_tag :address_line_3 %>
+    <label>Address line 3</label>
+    <input type="text" data-sign="address_line_3">
   </div>
   <div class="field">
-    <%= label_tag :postcode %><br>
-    <%= text_field_tag :postcode %>
+    <label>Postcode</label>
+    <input type="text" data-sign="postcode">
   </div>
   <div class="field">
-    <%= label_tag :phone %><br>
-    <%= text_field_tag :phone %>
+   <label>Phone</label>
+    <input type="text" data-sign="phone">
   </div>
   <div class="field">
-    <%= label_tag :first_name %><br>
-    <%= text_field_tag :first_name %>
+    <label>First name</label>
+    <input type="text" data-sign="first_name">
   </div>
   <div class="field">
-    <%= label_tag :last_name %><br>
-    <%= text_field_tag :last_name %>
+    <label>Last name</label>
+    <input type="text" data-sign="last_name">
   </div>
   <div class="field">
-    <%= label_tag :gender %><br>
-    <%= text_field_tag :gender %>
+    <label>Gender</label>
+   <input type="text" data-sign="gender">
   </div>
   <div class="field">
-    <%= label_tag :date_of_birth %><br>
-    <%= text_field_tag :date_of_birth %>
+   <label>Date of birth</label>
+   <input type="text" data-sign="date_of_birth">
   </div>
   <div class="actions">
-    <%= submit_tag "Sign up!", class: "btn btn-large btn-primary" %>
+    <button class="btn btn-large btn-primary">Sign up!</button>
   </div>
-<% end %>
+</div>
