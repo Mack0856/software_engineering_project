@@ -1,0 +1,49 @@
+<%= form_tag(controller: "home", action: "register") do |f| %>
+  <div class="field">
+    <%= label_tag :password %><br>
+    <%= text_field_tag :password %>
+  </div>
+  <div class="field">
+    <%= label_tag :email %><br>
+    <%= text_field_tag :email %>
+  </div>
+  <div class="field">
+    <%= label_tag :address_line_1 %><br>
+    <%= text_field_tag :address_line_1 %>
+  </div>
+  <div class="field">
+    <%= label_tag :address_line_2 %><br>
+    <%= text_field_tag :address_line_2 %>
+  </div>
+  <div class="field">
+    <%= label_tag :address_line_3 %><br>
+    <%= text_field_tag :address_line_3 %>
+  </div>
+  <div class="field">
+    <%= label_tag :postcode %><br>
+    <%= text_field_tag :postcode %>
+  </div>
+  <div class="field">
+    <%= label_tag :phone %><br>
+    <%= text_field_tag :phone %>
+  </div>
+  <div class="field">
+    <%= label_tag :first_name %><br>
+    <%= text_field_tag :first_name %>
+  </div>
+  <div class="field">
+    <%= label_tag :last_name %><br>
+    <%= text_field_tag :last_name %>
+  </div>
+  <div class="field">
+    <%= label_tag :gender %><br>
+    <%= text_field_tag :gender %>
+  </div>
+  <div class="field">
+    <%= label_tag :date_of_birth %><br>
+    <%= text_field_tag :date_of_birth %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Sign up!", class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>
