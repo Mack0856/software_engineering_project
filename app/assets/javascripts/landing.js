@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-	    $("#btnToggleLoginDropDown").on('click', function(){  
+    $("#btnToggleLoginDropDown").on('click', function(e){  
+
+	  e.stopPropagation();
       
       if ( $("#divLoginDropdown").hasClass("open") ) {
         $("#divLoginDropdown").removeClass("open");
@@ -10,7 +12,9 @@ $(document).ready(function(){
 
     });
 
-    $("#btnLogin").on('click', function(){
+    $("#btnLogin").on('click', function(e){
+
+	  e.stopPropagation();
 
       $.ajax({
       type: "POST",
@@ -24,7 +28,7 @@ $(document).ready(function(){
           window.location = '/home'
         },          
         401: function(){
-        	alert(401);
+        	alert("Incorrect details");
         }
       }
     })
