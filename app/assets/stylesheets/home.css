@@ -1,6 +1,11 @@
 /* STATIC  */
  @font-face { font-family: BlueJulyB; src: url('/assets/bluejuly.ttf'); } 
 
+body{
+width: 100%;
+height: 100%;
+}
+
 #brandHelloMusic{
   font-family: BlueJulyB;
   font-size: 33px;
