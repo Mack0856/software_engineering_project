@@ -27,6 +27,7 @@
 	position: fixed;
 	z-index: 1000;
 	color:WHITE;
+	left:60px;
 /* 	background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
     background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
     background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(255, 255, 255, 1)), to(rgba(0, 0, 0, 0)));
