@@ -1,11 +1,14 @@
 <% @body_class = 'index' %>
 <div class='row'>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    
+
     <div class="container">
       <a id="brandHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
       <div class="collapse navbar-collapse" >
         <ul class="nav navbar-nav navbar-right">
           <li>&nbsp;</li>
+          <li><p class="navbar-text">Welcome to your world of Music</p></li>
           <li>
             <div id="divLoginDropdown" class="dropdown">
                 <button id="btnToggleLoginDropDown" type="button" class="btn btn-default navbar-btn" data-toggle="dropdown">Login</button>
@@ -38,24 +41,24 @@
   
   $( document ).ready(function() {
 
-  $('#mainContainer').load( "home/landing" );
+    $('#mainContainer').load( "marketing/landing" );
 
-  $("#btnToggleLoginDropDown").on('click', function(){  
-    
-    if ( $("#divLoginDropdown").hasClass("open") ) {
-      $("#divLoginDropdown").removeClass("open");
-    } else {
-      $("#divLoginDropdown").addClass("open");
-    }
+    $("#btnToggleLoginDropDown").on('click', function(){  
+      
+      if ( $("#divLoginDropdown").hasClass("open") ) {
+        $("#divLoginDropdown").removeClass("open");
+      } else {
+        $("#divLoginDropdown").addClass("open");
+      }
 
-  });
+    });
 
-  $("#btnLogin").on('click', function(){
+    $("#btnLogin").on('click', function(){
 
-    window.location.replace("/home");
-    //alert("http://localhost:3000/home");
-  });
+      window.location.replace("/home");
+      //alert("http://localhost:3000/home");
+    });
 
-});// /.ON READY
+  });// /.ON READY
 
 </script>

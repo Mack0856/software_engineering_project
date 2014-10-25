@@ -3,37 +3,38 @@
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
-      <a id="brandHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
+      <div class="navbar-header">
+        <a id="brandHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
+      </div>
 
-      <ul class="nav navbar-nav">
-        <li class=""><a id="navMusic" href="#">Library</a></li>
-        <li class=""><a id="navNews" href="#">News</a></li>
-        <li class=""><a id="navStats" href="#">Store</a></li>
-      </ul>
-
+<!--       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ -->        <ul class="nav navbar-nav">
+          <li class=""><a id="navMusic" href="#">Library</a></li>
+          <li class=""><a id="navNews" href="#">News</a></li>
+          <li class=""><a id="navStats" href="#">Store</a></li>
+        </ul>
+      <!-- </div> -->
+      
       <ul class="nav pull-right" style="padding-right:30px; padding-top:8px;">
         <li><button id="btnLogout" class="btn btn-default" >Logout</button></li>
       </ul>
-        
-     <!--</div> /.navbar-inner -->
-
     </div><!-- /.navbar -->
   </nav>
-</div>
+</div> <!-- /.navbar -->
+
 <!-- New Nav Incmpete
 
  <nav class="nav-fillpath">
-          <a class="prev" href="/item1">
-            <span class="icon-wrap"></span>
-            <h3><strong>Danny</strong> Fleming</h3>
-          </a>
-          <a class="next" href="/item3">
-            <span class="icon-wrap"></span>
-            <h3><strong>Susan</strong> Walter</h3>
-          </a>
-        </nav>
+  <a class="prev" href="/item1">
+    <span class="icon-wrap"></span>
+    <h3><strong>Danny</strong> Fleming</h3>
+  </a>
+  <a class="next" href="/item3">
+    <span class="icon-wrap"></span>
+    <h3><strong>Susan</strong> Walter</h3>
+  </a>
+</nav>
   -->
-
 
 <!-- SCREENS -->
 
@@ -86,34 +87,12 @@
 </div>
 <!-- SCREENS END -->
 
-
-
-
-
 <script>
 
   $( document ).ready(function() {
 
-    $("#brandHelloMusic").on('click',function(){
-      $('#mainContainer').load( "home/welcome" );
-    });
-
-    $("#navMusic").on('click',function(){
-
-      $('#mainContainer').load( "home/music" );
-
-    });
-
-    $("#btnLogout").on('click',function(){
-      window.location.replace("/");
-    });
-
-    $('#mainContainer').load( "home/welcome" );
+    
 
   });
-
-  
-
-
 
 </script>
