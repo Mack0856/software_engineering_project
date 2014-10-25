@@ -1,0 +1,24 @@
+<% @body_class = 'index' %>
+<div class='row'>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <a id="brandHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
+    </div><!-- /.navbar-inner -->
+  </nav>
+</div><!-- /.navbar -->
+<div class="row">
+  <div id="mainContainer" class="container"></div>
+</div>
+<div class="row">
+  <div id="footer" class="container">
+</div>
+<script>
+  
+  $( document ).ready(function() {
+
+    $('#mainContainer').load( "users/new" );
+
+  });
+
+
+</script>
