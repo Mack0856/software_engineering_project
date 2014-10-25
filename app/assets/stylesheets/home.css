@@ -6,6 +6,16 @@
   font-size: 33px;
 }
 
+#gradient{
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  width: 101%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
 html::-webkit-scrollbar { 
     display: none; 
 }
@@ -75,6 +85,7 @@ html::-webkit-scrollbar {
 #loginAbout{
   position: fixed;
   left: -921px;
+  z-index: 997;
   /*background-color: BLUE;*/
   background-image: url('/assets/pic1.jpg');
   background-repeat: no-repeat;
@@ -87,6 +98,7 @@ html::-webkit-scrollbar {
 #loginWelcome{
   position: fixed;
   left: 1330px;
+  z-index: 997;
   /*background-color: RED;*/
   background-image: url('/assets/pic2.jpg');
   background-repeat: no-repeat;
@@ -98,6 +110,7 @@ html::-webkit-scrollbar {
 
 #loginExtra{
   position: fixed;
+  z-index: 997;
   /*background-color: GREEN;*/
   background-image: url('/assets/pic3.jpg');
   background-repeat: no-repeat;
@@ -108,6 +121,6 @@ html::-webkit-scrollbar {
   height: 969px;
 }
 
-#player{
-  
+#cp_container_1{
+  z-index: 999;
 }
