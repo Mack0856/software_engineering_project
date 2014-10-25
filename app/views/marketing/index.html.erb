@@ -58,8 +58,22 @@
 
     $("#btnLogin").on('click', function(){
 
-      window.location.replace("/home");
-      //alert("http://localhost:3000/home");
+      $.ajax({
+      type: "POST",
+      url: "/login",
+      data: {
+        email: $('#user').val(),
+        password: $('#password').val()   
+      },
+      statusCode: {
+        200: function(status){
+          window.location = '/home'
+        },          
+        401: function(){
+
+        }
+      }
+    })
     });
 
   });// /.ON READY
