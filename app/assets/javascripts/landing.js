@@ -1,4 +1,37 @@
-$(document).ready(function(){
+$(document).ready(function(event){
+
+	  event.stopPropagation();
+
+	    $("#btnToggleLoginDropDown").on('click', function(){  
+      
+      if ( $("#divLoginDropdown").hasClass("open") ) {
+        $("#divLoginDropdown").removeClass("open");
+      } else {
+        $("#divLoginDropdown").addClass("open");
+      }
+
+    });
+
+    $("#btnLogin").on('click', function(){
+
+      $.ajax({
+      type: "POST",
+      url: "/login",
+      data: {
+        email: $('#user').val(),
+        password: $('#password').val()   
+      },
+      statusCode: {
+        200: function(status){
+          window.location = '/home'
+        },          
+        401: function(){
+        	alert(401);
+        }
+      }
+    })
+    });
+
 // 	if($('#landing_video').length>0){
 // 		var defaults = {
 // 		            // If you want to use a single mp4 source, set as true
