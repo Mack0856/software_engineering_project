@@ -30,6 +30,7 @@ gem 'spring',        group: :development
 gem 'cancancan'
 
 gem 'awesome_print', group: :development
+gem 'carrierwave'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

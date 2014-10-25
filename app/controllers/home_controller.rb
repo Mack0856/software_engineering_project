@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    render json: JSON.parse(Song.all)
   end
 
   def register
