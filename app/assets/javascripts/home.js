@@ -1,5 +1,6 @@
 $( document ).ready(function() {
-  
+  var activeScene = 1;
+
   $("#brandHelloMusic").on('click',function(){
       $('#mainContainer').load( "home/welcome" );
     });
@@ -16,10 +17,21 @@ $( document ).ready(function() {
 
     //$('#mainContainer').load( "home/welcome" );
 
-
+$('.right').click(function(){
+  if(activeScene == 2){
+    
+   }
+})
   if($('#stage').length > 0){
     $('#stage').ready(function(){
-      $('#home').saucySlider({pager: $('.pagers li'),nextButton: $('.right'),prevButton: $('.left'),scenePoints: [0, 2251, 5000],sceneTimes: [1000, 1000, 1000]});
+      $('#home').saucySlider({
+        pager: $('.pagers li'),
+        nextButton: $('.right'),
+        prevButton: $('.left'),scenePoints: [0, 2251, 5000],
+        sceneTimes: [1000, 1000, 1000],
+        sceneMoved:function(evt){
+         activeScene = evt.newScene;
+        }});
     });
   }
 
