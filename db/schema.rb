@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141013192326) do
+ActiveRecord::Schema.define(version: 20141025133443) do
 
   create_table "invoices", force: true do |t|
     t.integer  "total_cost"
     t.date     "date_payable"
     t.boolean  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "libraries", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "song_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,6 +41,7 @@ ActiveRecord::Schema.define(version: 20141013192326) do
     t.string   "song_path"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "file"
   end
 
   create_table "transactions", force: true do |t|

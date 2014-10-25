@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     $("#btnToggleLoginDropDown").on('click', function(e){  
 
-	  e.stopPropagation();
+      e.stopPropagation();
       
       if ( $("#divLoginDropdown").hasClass("open") ) {
         $("#divLoginDropdown").removeClass("open");
@@ -13,25 +13,24 @@ $(document).ready(function(){
     });
 
     $("#btnLogin").on('click', function(e){
-
-	  e.stopPropagation();
-
-      $.ajax({
-      type: "POST",
-      url: "/login",
-      data: {
-        email: $('#user').val(),
-        password: $('#password').val()   
-      },
-      statusCode: {
-        200: function(status){
-          window.location = '/home'
-        },          
-        401: function(){
-        	alert("Incorrect details");
+      e.stopPropagation();
+      ajax_call = $.ajax({
+        type: "POST",
+        url: "/login",
+        data: {
+          email: $('#user').val(),
+          password: $('#password').val()   
+        },
+        statusCode: {
+          200:function(response){
+            window.location = "/home?user_i="+response.id+"";
+          },
+          403:function(response){
+            alert("Incorrect email or password");
+          }
         }
-      }
-    })
+      })
+     
     });
 
  })

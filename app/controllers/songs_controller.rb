@@ -24,10 +24,13 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
+    binding.pry
     @song = Song.new(song_params)
 
     respond_to do |format|
       if @song.save
+        uploader = SongUploader.new
+        uploader.store!(params[:file])
         format.html { redirect_to @song, notice: 'Song was successfully created.' }
         format.json { render :show, status: :created, location: @song }
       else

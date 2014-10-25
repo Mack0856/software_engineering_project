@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :libraries
+
   resources :songs
 
   resources :transactions

@@ -7,5 +7,4 @@ class User < ActiveRecord::Base
 	validates :postcode, presence: true
 	validates :gender, presence: true
 	validates :date_of_birth, presence: true
-
 end
