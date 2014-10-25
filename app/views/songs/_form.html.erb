@@ -32,24 +32,7 @@
     <%= f.text_field :genre %>
   </div>
   <div class="field">
-    <%= f.label :last_played %><br>
-    <%= f.date_select :last_played %>
-  </div>
-  <div class="field">
-    <%= f.label :last_download %><br>
-    <%= f.date_select :last_download %>
-  </div>
-  <div class="field">
-    <%= f.label :total_plays %><br>
-    <%= f.number_field :total_plays %>
-  </div>
-  <div class="field">
-    <%= f.label :total_downloads %><br>
-    <%= f.number_field :total_downloads %>
-  </div>
-  <div class="field">
-    <%= f.label :song_path %><br>
-    <%= f.text_field :song_path %>
+    <%= f.file_field :file %><br>
   </div>
   <div class="actions">
     <%= f.submit %>
