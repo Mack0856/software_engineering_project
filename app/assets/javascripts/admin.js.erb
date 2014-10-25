@@ -1,0 +1,17 @@
+$(document).ready(function(){
+
+	//'songs'
+
+	$('#navAdminHome').click(function(){
+		//$('#mainContainer').html("You are an admin");		
+	});
+
+	$('button[data-nav="admin-reports"]').click(function(){
+		// $('#mainContainer').html(" render partial: ");
+	});
+
+	$('button[data-nav="admin-manage-songs"]').click(function(){
+		$('#mainContainer').load( "songs" );
+	});
+
+})
