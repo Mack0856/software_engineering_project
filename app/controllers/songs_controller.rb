@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  # before_filter :set_song, only: [:show, :edit, :update, :destroy]
+  before_filter :set_song, only: [:show, :edit, :update, :destroy, :download, :update_listens]
 
   # GET /songs
   # GET /songs.json
@@ -40,6 +40,26 @@ class SongsController < ApplicationController
         format.html { redirect_to songs_path, notice: 'Some errors were found' }
       end
     end
+  end
+
+  def download
+    if @song.total_downloads == nil
+      @song.total_downloads = 0
+    end
+    @song.total_downloads += 1
+    @song.last_download = Date.today
+    @song.save!
+    send_file @song.file.path, type: "mp3", x_sendfile: true
+  end
+
+  def update_listens
+    if @song.total_plays == nil
+      @song.total_plays = 0
+    end
+    @song.total_plays += 1
+    @song.last_played = Date.today
+    @song.save!
+    render json: "", status: :ok
   end
 
   # PATCH/PUT /songs/1
