@@ -5,7 +5,7 @@ $( document ).ready(function() {
   $.when(songs).done(function(songs){
     var html = "";
     $.each(songs,function(index,value){
-      html += '<li data-songid="'+value.id+'">'
+      html += '<ul><li data-songid="'+value.id+'">'
                     +'<div class="album_art">'
                     +   '<img src="/assets/'+value.art_filename+'" data-file="'+value.filename+'"/>'
                     +'</div>'
@@ -24,18 +24,18 @@ $( document ).ready(function() {
               +'<div class="album_options">'
               +  '<a href="#" > Download </a>'
              + '</div>'
-            +'</li>';
+            +'</li></ul>';
     })
-      $('#lib_results ul').append(html);
+      $('#lib_results').append(html);
   })              
   $('body').on('mouseenter','.album_art img',function(){
     var imgSRC = $(this)[0];
     $('#loginAbout').css("background-image","url('"+imgSRC.src+"')");
   })
 
-$('body').on('click','.album_art img' ,function(){
-   var song_play = '/assets/' + $(this).data("file");
-     $("#jquery_jplayer_1").jPlayer("setMedia",{ mp3: song_play }).jPlayer("play"); 
+  $('body').on('click','.album_art img' ,function(){
+    var song_play = '/assets/' + $(this).data("file");
+    $("#jquery_jplayer_1").jPlayer("setMedia",{ mp3: song_play }).jPlayer("play"); 
   })
 
   $('body').on('mouseleave','.album_art img',function(){
