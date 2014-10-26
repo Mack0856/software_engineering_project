@@ -18,8 +18,9 @@ Rails.application.routes.draw do
   get '/register', to: 'home#register'
 
   get '/admin/', to: 'admin#index'
-  get '/admin/manage_songs', to: 'admin#manage_songs'
-  get '/admin/reports', to: 'admin#reports'
+  #get '/admin/manage_songs', to: 'admin#manage_songs'
+  #get '/admin/reports', to: 'admin#reports'
+  #get '/admin/admin_landing', to: 'admin#admin_landing'
 
   post '/login', to: 'login#login'
 
