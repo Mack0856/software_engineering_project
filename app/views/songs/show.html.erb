@@ -1,54 +1,87 @@
-<p id="notice"><%= notice %></p>
+<div class='row'>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+     
+      <div class="navbar-header">
+        <a id="brandHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
+      </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @song.title %>
-</p>
+      <ul class="nav pull-right" style="padding-right:30px; padding-top:8px;">
+        <li><button id="btnLogout" class="btn btn-default" >Logout</button></li>
+      </ul>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @song.artist %>
-</p>
+     <div class="navbar-collapse collapse adminContainer">
+        <ul class="nav navbar-nav">
+          <li class="active"><a id="nav_manage_songs" href="/songs">Manage Songs</a></li>
+          <li class=""><a id="nav_admin_manage_users" href="/users">Manage Users</a></li>
+          <li class=""><a id="nav_reports" href="#">Reporting</a></li>
+        </ul>
+      </div>
+      
+    </div><!-- /.container -->
 
-<p>
-  <strong>Album:</strong>
-  <%= @song.album %>
-</p>
+  </nav>
+</div>
 
-<p>
-  <strong>Year:</strong>
-  <%= @song.year %>
-</p>
+<div class='row'>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @song.genre %>
-</p>
+  <div class="col-xs-4 col-xs-offset-4">
 
-<p>
-  <strong>Last played:</strong>
-  <%= @song.last_played %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Last download:</strong>
-  <%= @song.last_download %>
-</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @song.title %>
+    </p>
 
-<p>
-  <strong>Total plays:</strong>
-  <%= @song.total_plays %>
-</p>
+    <p>
+      <strong>Artist:</strong>
+      <%= @song.artist %>
+    </p>
 
-<p>
-  <strong>Total downloads:</strong>
-  <%= @song.total_downloads %>
-</p>
+    <p>
+      <strong>Album:</strong>
+      <%= @song.album %>
+    </p>
 
-<p>
-  <strong>Song path:</strong>
-  <%= @song.song_path %>
-</p>
+    <p>
+      <strong>Year:</strong>
+      <%= @song.year %>
+    </p>
 
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+    <p>
+      <strong>Genre:</strong>
+      <%= @song.genre %>
+    </p>
+
+    <p>
+      <strong>Last played:</strong>
+      <%= @song.last_played %>
+    </p>
+
+    <p>
+      <strong>Last download:</strong>
+      <%= @song.last_download %>
+    </p>
+
+    <p>
+      <strong>Total plays:</strong>
+      <%= @song.total_plays %>
+    </p>
+
+    <p>
+      <strong>Total downloads:</strong>
+      <%= @song.total_downloads %>
+    </p>
+
+    <p>
+      <strong>Song path:</strong>
+      <%= @song.song_path %>
+    </p>
+
+    <%= link_to 'Edit', edit_song_path(@song) %> |
+    <%= link_to 'Back', songs_path %>
+
+</div>
+</div>
+
