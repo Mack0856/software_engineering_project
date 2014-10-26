@@ -1,6 +1,16 @@
 $( document ).ready(function() {
   var activeScene = 1;
 
+$('.album_art img').mouseenter(function(){
+  var imgSRC = $(this)[0];
+  $('#loginAbout').css("background-image","url('"+imgSRC.src+"')");
+})
+$('.album_art img').mouseleave(function(){
+  var imgSRC = $(this)[0];
+  $('#loginAbout').css("background-image","url('/assets/pic1.jpg')  ");
+})
+  
+
   $("#brandHelloMusic").on('click',function(){
       $('#mainContainer').load( "home/welcome" );
     });

@@ -117,7 +117,6 @@ html::-webkit-scrollbar {
 #loginExtra{
   position: fixed;
   z-index: 997;
-  /*background-color: GREEN;*/
   background-image: url('/assets/pic3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,4 +128,41 @@ html::-webkit-scrollbar {
 
 #cp_container_1{
   z-index: 999;
+}
+
+#lib{
+  font-family: BlueJulyB;
+  color: WHITE;
+  width: 70%;
+  height: 70%;
+  padding: 39px;
+  z-index: 999;
+  max-height: 97%;
+  height: 100%;
+}
+
+#lib_searchBar{
+}
+
+#lib_results {
+  margin-top: 30px;
+  height: 100%;
+  max-height: 92%;
+  max-width: 65%;
+  width: 100%;
+  overflow-y:auto;
+}
+
+#lib_results img{
+  width:154px;
+  height:154px;  
+}
+
+#lib_results ul{
+  list-style: none;
+  display: inline-flex;  
+}
+
+#lib_results li{
+ margin: 0 0 3px 100px;
 }
