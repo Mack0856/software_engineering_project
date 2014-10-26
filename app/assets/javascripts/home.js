@@ -47,7 +47,7 @@ $('.right').click(function(){
 
         var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
         {
-          mp3: "http://localhost:3000/assets/01_Rock_N__Roll__Will_Take_You_to_the_Mountain_.mp3"
+          mp3: "http://localhost:3000/assets/test.mp3"
         }, {
           cssSelectorAncestor: "#cp_container_1",
           swfPath: "assets",

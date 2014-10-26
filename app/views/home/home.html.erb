@@ -1,7 +1,6 @@
 <% @body_class = 'index' %>
 <% @serialized_songs %>
-<% user = User.find(session[:user_id]) %>
-<div class="row">
+
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     
     <div class="container">
@@ -21,7 +20,7 @@
 
 
 <!-- SCREENS -->
-<% unless user.subscribed.nil? %>
+
   <div class="container">
     <div id="home" class="col-xs-12">
         <div id="sidebarLeft">
@@ -48,126 +47,12 @@
                   </li>
                   <li>
                     <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
+                        <ul>
+                          <li><label>Track Name: </label></li>
+                          <li><label>Artist: </label></li>
+                          <li><label>Album: </label></li>
+                          <li><label>Length: </label></li>
+                        </ul>
                     </div>
                   </li>
                   <li>
@@ -196,6 +81,7 @@
       </div>
   </div>
 
+<!--  <div id="gradient"></div>  -->
   <div id="player">
     <div id="jquery_jplayer_1" class="cp-jplayer"></div>
     <div class="prototype-wrapper"> <!-- A wrapper to emulate use in a webpage and center align -->
@@ -216,16 +102,29 @@
         </ul>
       </div>
     </div>
+
   </div>
 </div>
-<!-- PLAYER END-->
-<% else %>
-  <%= render partial: 'subscribe' %>
-<% end %>
+<div id="player_info">
+      asd
 </div>
+<!-- PLAYER END-->
+
+</div>
+
+<script>
+  var  songs = (function(){$.ajax({
+                                  type: "GET",
+                                  url: "/songs/songs_json",
+                                  statusCode:{
+                                    200:function(response){
+                                                            return response
+                                    }
+                           }})
+                })()
+</script>
 <!-- SCREENS END -->
 
-<!-- <div id="gradient"></div> -->
 
 <!-- New Nav Incmpete
 
