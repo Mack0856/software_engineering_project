@@ -29,6 +29,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        @user.total_songs_downloaded = 0
+        @user.total_songs_played = 0
+        @user.save!
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else

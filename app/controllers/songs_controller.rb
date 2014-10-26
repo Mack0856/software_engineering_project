@@ -35,6 +35,8 @@ class SongsController < ApplicationController
         art_uploader.store!(params[:song][:art])
         @song.file = song_uploader.file
         @song.art = art_uploader.file
+        @song.total_downloads = 0
+        @song.total_plays = 0
         @song.save!
         format.html { redirect_to songs_path, notice: 'Song was successfully created.' }
       else
