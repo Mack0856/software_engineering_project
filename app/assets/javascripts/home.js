@@ -7,7 +7,7 @@ $( document ).ready(function() {
     $.each(songs,function(index,value){
       html += '<ul><li data-songid="'+value.id+'">'
                     +'<div class="album_art">'
-                    +   '<img src="/assets/'+value.art_filename+'" data-file="'+value.filename+'"/>'
+                    +   '<img src="/assets/'+value.art_filename+'" data-file="'+value.filename+'" data-id="'+value.id+'"/>'
                     +'</div>'
                   +'</li>'
                   +'<li>'
@@ -22,7 +22,7 @@ $( document ).ready(function() {
                  +'</li>'
                 +'<li>'
               +'<div class="album_options">'
-              +  '<a href="#" > Download </a>'
+              +  '<a target="_blank" href="/songs/download/'+value.id+'" > Download </a>'
              + '</div>'
             +'</li></ul>';
     })
@@ -33,9 +33,11 @@ $( document ).ready(function() {
     $('#loginAbout').css("background-image","url('"+imgSRC.src+"')");
   })
 
-  $('body').on('click','.album_art img' ,function(){
-    var song_play = '/assets/' + $(this).data("file");
-    $("#jquery_jplayer_1").jPlayer("setMedia",{ mp3: song_play }).jPlayer("play"); 
+
+$('body').on('click','.album_art img' ,function(){
+   var song_play = '/assets/' + $(this).data("file");
+     $("#jquery_jplayer_1").jPlayer("setMedia",{ mp3: song_play }).jPlayer("play");
+     $.ajax({type: "GET", url: "songs/update_listens/"+$(this).data("id")}) 
   })
 
   $('body').on('mouseleave','.album_art img',function(){
