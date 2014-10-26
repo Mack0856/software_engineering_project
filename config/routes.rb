@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   #get '/admin/reports', to: 'admin#reports'
   #get '/admin/admin_landing', to: 'admin#admin_landing'
 
-  get '/songs_json', to: "song#songs_json"
+  get '/api/songs', to: "api/songs#index"
 
   post '/login', to: 'login#login'
 

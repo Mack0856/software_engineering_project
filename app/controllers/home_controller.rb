@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   	if request.post?
   		user = User.create(params[:user])
   		if user.persisted?
-        session[:user_id] = user.id
+        # session[:user_id] = user.id
   			render :json, status: :ok
   		else
   			render :json, status: :unprocessable_entity

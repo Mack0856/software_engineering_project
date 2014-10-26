@@ -5,16 +5,4 @@ class AdminController < ActionController::Base
   def index
 	render layout: 'layouts/application.html.erb'
   end
-  def reports
-	render layout: 'layouts/application.html.erb'
-  end
-  def users
-	render layout: 'layouts/application.html.erb'
-  end
-  def songs
-	render layout: 'layouts/application.html.erb'
-  end
-  def admin_landing
-	render layout: 'layouts/application.html.erb'
-  end
 end

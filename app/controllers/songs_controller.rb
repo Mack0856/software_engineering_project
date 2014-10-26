@@ -35,11 +35,9 @@ class SongsController < ApplicationController
         @song.file = song_uploader.file
         @song.art = art_uploader.file
         @song.save!
-        format.html { redirect_to @song, notice: 'Song was successfully created.' }
-        format.json { render :show, status: :created, location: @song }
+        format.html { redirect_to songs_path, notice: 'Song was successfully created.' }
       else
-        format.html { render :new }
-        format.json { render json: @song.errors, status: :unprocessable_entity }
+        format.html { redirect_to songs_path, notice: 'Some errors were found' }
       end
     end
   end
