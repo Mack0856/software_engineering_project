@@ -47,126 +47,12 @@
                   </li>
                   <li>
                     <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
-               </ul>
-                <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <label>Hello</label>
+                        <ul>
+                          <li><label>Track Name: </label></li>
+                          <li><label>Artist: </label></li>
+                          <li><label>Album: </label></li>
+                          <li><label>Length: </label></li>
+                        </ul>
                     </div>
                   </li>
                   <li>
@@ -219,14 +105,8 @@
 
 </div>
 <script>
-$('.album_art img').mouseenter(function(){
-  var imgSRC = $(this)[0];
-  $('#loginAbout').css("background-image","url('"+imgSRC.src+"')");
-})
-$('.album_art img').mouseleave(function(){
-  var imgSRC = $(this)[0];
-  $('#loginAbout').css("background-image","url('/assets/pic1.jpg')");
-})
+   window.songs = $.parseJSON(<%= @serialized_songs %>);
+
 </script>
 
 <!-- <div id="gradient"></div> -->
