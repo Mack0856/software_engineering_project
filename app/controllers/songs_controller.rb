@@ -49,6 +49,14 @@ class SongsController < ApplicationController
     @song.total_downloads += 1
     @song.last_download = Date.today
     @song.save!
+    user = User.find(session[:user_id])
+    if user
+      if user.total_songs_downloaded == nil
+        user.total_songs_downloaded = 0
+      end
+      user.total_songs_downloaded += 1
+      user.save!
+    end
     send_file @song.file.path, type: "mp3", x_sendfile: true
   end
 
@@ -59,6 +67,14 @@ class SongsController < ApplicationController
     @song.total_plays += 1
     @song.last_played = Date.today
     @song.save!
+    user = User.find(session[:user_id])
+    if user
+      if user.total_songs_played == nil
+        user.total_songs_played = 0
+      end
+      user.total_songs_played += 1
+      user.save!
+    end
     render json: "", status: :ok
   end
 

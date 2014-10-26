@@ -31,12 +31,19 @@ class HomeController < ApplicationController
     user = User.find(params[:id])
     if user
       user.subscribed = true
+      user.subscription_plan = params[:subscription_plan]
+      if params[:subscription_plan] == "quarterly"
+        user.next_payment_on = 3.months.from_now
+      else
+        user.next_payment_on = 1.year.from_now
+      end
+      user.suspended = false
       user.save
       render json: "", status: :ok
     end
   end
 
   def user_params
-    params.permit(:first_name, :last_name, :email, :password, :date_of_birth, :gender)
+    params.permit(:first_name, :last_name, :email, :password, :date_of_birth, :gender, :subscription_plan)
   end
 end
