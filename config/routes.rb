@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/home', to: 'home#home'
   get '/home/welcome', to: 'home#welcome'
   get '/home/music', to: 'home#music'
+  get '/home/subscribe', to: 'home#subscribe'
   get '/register', to: 'home#register'
 
   get '/admin/', to: 'admin#index'
