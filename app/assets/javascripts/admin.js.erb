@@ -1,36 +1,55 @@
 $(document).ready(function(){
 
-	$('#navAdminHome').click(function(){
+	console.log("start");
 
-		clearContainers();
-	    //$("#songsContainer").css('display', 'block');
+	$('#brandHelloMusic').click(function(){
+
+		hideContainers();
+	    $("#landingContainer").css('display', 'block');
+	    $("#navAdminHome").parent().addClass("active");
+
 	});
 
-	$('button[data-nav="admin-reports"]').click(function(){
+	$('#nav_manage_songs').click(function(){
 
-		clearContainers();		
+		hideContainers();	
+		$('#songsContainer').load( "songs" );	
+		$("#songsContainer").css('display', 'block');
+
+	    $("#nav_manage_songs").parent().addClass("active");
+	    
+
+	});
+
+	$('#nav_admin_manage_users').click(function(){
+
+		hideContainers();
+		$('#usersContainer').load( "users" );
+		$("#usersContainer").css('display', 'block');
+	    $("#nav_admin_manage_users").parent().addClass("active");
+
+	});
+
+	$('#nav_reports').click(function(){
+		
+		hideContainers();
 		$("#reportsContainer").css('display', 'block');
-	});
+	    $("#nav_reports").parent().addClass("active");
 
-	$('button[data-nav="admin-manage-users"]').click(function(){
-		clearContainers();
-		$('#mainContainer').load("users");
-		$("#reportsContainer").css('display', 'block');
-
-	});
-
-	$('button[data-nav="admin-manage-songs"]').click(function(){
-		clearContainers();
-		$('#songs').load( "songs" );
 	});
 
 });
 
-function clearContainers (){
+function hideContainers (){
 
 	$("#landingContainer").css('display', 'none');
 	$("#songsContainer").css('display', 'none');
 	$("#reportsContainer").css('display', 'none');
 	$("#usersContainer").css('display', 'none');
+
+    $("#nav_reports").parent().removeClass("active");
+    $("#nav_admin_manage_users").parent().removeClass("active");	    
+    $("#nav_manage_songs").parent().removeClass("active");
+    $("#navAdminHome").parent().removeClass("active");
 
 }
