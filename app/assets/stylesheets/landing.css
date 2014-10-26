@@ -32,8 +32,10 @@
 }
 #landing_signup .col-xs-6{
 	position: relative;
-	width: 47%;
+	width: 68%;
 	height: 100%;
+	clear: both;
+
 }
 
 #landing_signup h1{
@@ -46,15 +48,19 @@
 }
 
 .jumbotron{
-	position:relative;
+	position: relative;
 	font-family: BlueJulyB;
-	margin-bottom: 0px;
+	/* margin-bottom: 0px; */
 	height: 50%;
-	width: 50%;
+	width: 100%;
 	color: white;
 	text-shadow: black 0.3em 0.3em 0.3em;
 	background: transparent;
-	left: 500px;
+	/* left: 500px; */
+	clear: both;
+	float: right;
+	left: 530px;
+	bottom: 507px;
 }
 
 
