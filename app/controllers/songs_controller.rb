@@ -28,9 +28,12 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       if @song.save
-        uploader = SongUploader.new
-        uploader.store!(params[:song][:file])
-        @song.file = uploader.file
+        song_uploader = SongUploader.new
+        song_uploader.store!(params[:song][:file])
+        art_uploader = ArtUploader.new
+        art_uploader.store!(params[:song][:art])
+        @song.file = song_uploader.file
+        @song.art = art_uploader.file
         @song.save!
         format.html { redirect_to @song, notice: 'Song was successfully created.' }
         format.json { render :show, status: :created, location: @song }

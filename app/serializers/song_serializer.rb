@@ -13,7 +13,9 @@ class SongSerializer
 				total_plays: song.total_plays,
 				total_downloads: song.total_downloads,
 				path: song.file.file.path,
-				filename: song.file.file.filename
+				filename: song.file.file.filename,
+				art_filename: song.art.file.filename,
+				art_path: song.art.file.path
 			}
 			serialized_songs << song_hash
 		end

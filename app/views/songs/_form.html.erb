@@ -32,7 +32,12 @@
     <%= f.text_field :genre  , class:"form-control" %>
   </div>
   <div class="form-group field">
+    <%= f.label :file %><br>
     <%= f.file_field :file  , class:"form-control" %><br>
+  </div>
+  <div class="form-group field">
+    <%= f.label :art %><br>
+    <%= f.file_field :art  , class:"form-control" %><br>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025133443) do
+ActiveRecord::Schema.define(version: 20141026101249) do
 
   create_table "invoices", force: true do |t|
     t.integer  "total_cost"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20141025133443) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "file"
+    t.string   "art"
   end
 
   create_table "transactions", force: true do |t|
