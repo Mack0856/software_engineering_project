@@ -55,6 +55,10 @@
     <%= f.label :date_of_birth %><br>
     <%= f.text_field :date_of_birth %>
   </div>
+  <div class="field">
+    <%= f.label :permissions %><br>
+    <%= f.select(:permissions, options_for_select(["basic", "administrator"], selected: params[:permissions])) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
