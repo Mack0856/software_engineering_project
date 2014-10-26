@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 
   def logout
     reset_session
-    render json: "", status: :ok
+    redirect_to '/', notice: "You have successfully logged out."
   end
 
   def subscribe

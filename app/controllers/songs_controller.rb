@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   before_filter :set_song, only: [:show, :edit, :update, :destroy, :download, :update_listens]
+  before_filter :check_logged_in
 
   # GET /songs
   # GET /songs.json
@@ -117,5 +118,16 @@ class SongsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def song_params
       params.require(:song).permit(:title, :artist, :album, :year, :genre, :last_played, :last_download, :total_plays, :total_downloads, :song_path)
+    end
+
+    def check_logged_in
+      if session[:user_id]
+        user = User.find(session[:user_id])
+        unless user && user.permissions == "administrator"
+          redirect_to '/', flash: { notice: "You are not authorized to access this page." }
+        end
+      else
+        redirect_to '/', flash: { notice: "You are not logged in." }
+      end
     end
 end
