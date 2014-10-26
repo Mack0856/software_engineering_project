@@ -1,99 +1,119 @@
-var nav = "";
+// var nav = "";
 
-function nav_manage_songs(){
-	hideContainers();	
-	$('#songsContainer').load( "songs" );	
-	$("#songsContainer").css('display', 'block');
+// function nav_manage_songs(){
+// 	hideContainers();	
+// 	$('#songsContainer').load( "songs" );
+// 	$("#songsContainer").css('display', 'block');
 
-	removeNavbarActiveClass();
-    $("#nav_manage_songs").parent().addClass("active");
-}
+// 	removeNavbarActiveClass();
+//     $("#nav_manage_songs").parent().addClass("active");
+// }
 
-$(document).ready(function(){
+// function showSong(songID){
 
-	console.log("start");
+// 	hideContainers();
+// 	$('#songsContainer').load( "songs/" + songID );	
+// 	$("#songsContainer").css('display', 'block');
 
-	$('#brandHelloMusic').click(function(){
+// }
 
-		hideContainers();
-	    $("#landingContainer").css('display', 'block');
+// function hideContainers (){
 
-		removeNavbarActiveClass();
-	    $("#navAdminHome").parent().addClass("active");
+// 	$("#landingContainer").css('display', 'none');
+// 	$("#songsContainer").css('display', 'none');
+// 	$("#reportsContainer").css('display', 'none');
+// 	$("#usersContainer").css('display', 'none');
 
-	});
+// }
 
-	$('#nav_manage_songs').click(function(){
+// function removeNavbarActiveClass(){
+// 	$("#nav_reports").parent().removeClass("active");
+//     $("#nav_admin_manage_users").parent().removeClass("active");	    
+//     $("#nav_manage_songs").parent().removeClass("active");
+//     $("#navAdminHome").parent().removeClass("active");
 
-	    nav_manage_songs();
+// }
 
-	});
+// $(document).ready(function(){
 
-	$('#nav_admin_manage_users').click(function(){
+// 	console.log("doument ready start");
 
-		hideContainers();
-		$('#usersContainer').load( "users" );
-		$("#usersContainer").css('display', 'block');
+// 	$('#brandHelloMusic').click(function(){
 
-		removeNavbarActiveClass();		
-	    $("#nav_admin_manage_users").parent().addClass("active");
+// 		hideContainers();
+// 	    $("#landingContainer").css('display', 'block');
 
-	});
+// 		removeNavbarActiveClass();
+// 	    $("#navAdminHome").parent().addClass("active");
 
-	$('#nav_reports').click(function(){
+// 	});
+
+// 	$('#nav_manage_songs').click(function(){
+
+// 	    nav_manage_songs();
+
+// 	});
+
+// 	$('#nav_admin_manage_users').click(function(){
+
+// 		hideContainers();
+// 		$('#usersContainer').load( "users" );
+// 		$("#usersContainer").css('display', 'block');
+
+// 		removeNavbarActiveClass();		
+// 	    $("#nav_admin_manage_users").parent().addClass("active");
+
+// 	});
+
+// 	$('#nav_reports').click(function(){
 		
-		hideContainers();
-		$("#reportsContainer").css('display', 'block');
+// 		hideContainers();
+// 		$("#reportsContainer").css('display', 'block');
 
-		removeNavbarActiveClass();		
-	    $("#nav_reports").parent().addClass("active");
+// 		removeNavbarActiveClass();		
+// 	    $("#nav_reports").parent().addClass("active");
 
-	});
+// 	});
 
-	$('#btnNewSong').click(function(){
+// 	$('.btnShowSong').click(function(){
 		
-		hideContainers();
-		$('#songsContainer').load( "songs/new" );	
-		$("#songsContainer").css('display', 'block');
+// 		var songID = $(this).parent().parent().attr('id');
+// 		showSong(songID);
 
+// 	});
 
-		//alert("asd");
-
-	});
-
-	$('#btnCancelNewSong').click(function(){
+// 	$('#btnNewSong').click(function(){
 		
-		nav_manage_songs();
+// 		$('#songsContainer').load( "songs" );
 
-	});
+// 		// $("#songsContainer").css('display', 'none');
+// 		// $("#songsNew").css('display', 'block');
 
-	$('.btnShowSong').click(function(){
+
+// 		//alert("asd");
+
+// 	});
+
+// 	$('#btnSaveNewSong').click(function(){
 		
-		//hideContainers();
+// 		//ajax call ruby to create
+
 		
-		alert(this.id);
+// 		alert("saved");
+// 	});
 
-		//$('#songsContainer').load( "songs/3" );	
-		//$("#songsContainer").css('display', 'block');
+// 	$('#btnCancelNewSong').click(function(){
+		
+// 		nav_manage_songs();
 
-	});
+// 	});
 
-});
 
-function hideContainers (){
+// 	$('#btnBackToIndex').click(function(){
+		
+// 	    nav_manage_songs();
 
-	$("#landingContainer").css('display', 'none');
-	$("#songsContainer").css('display', 'none');
-	$("#reportsContainer").css('display', 'none');
-	$("#usersContainer").css('display', 'none');
+// 	});
 
-    
-}
-
-function removeNavbarActiveClass(){
-	$("#nav_reports").parent().removeClass("active");
-    $("#nav_admin_manage_users").parent().removeClass("active");	    
-    $("#nav_manage_songs").parent().removeClass("active");
-    $("#navAdminHome").parent().removeClass("active");
-
-}
+//  //nav_manage_songs();
+// });

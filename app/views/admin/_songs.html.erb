@@ -1,0 +1,45 @@
+<h1>Listing songs</h1>
+
+<table class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Last played</th>
+      <th>Last download</th>
+      <th>Total plays</th>
+      <th>Total downloads</th>
+      <th>Song path</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  	<% @songs = Song.all %>
+    <% @songs.each do |song| %>
+      <tr id="<%= song.id %>" >
+        <td><%= song.title %></td>
+        <td><%= song.artist %></td>
+        <td><%= song.album %></td>
+        <td><%= song.year %></td>
+        <td><%= song.genre %></td>
+        <td><%= song.last_played %></td>
+        <td><%= song.last_download %></td>
+        <td><%= song.total_plays %></td>
+        <td><%= song.total_downloads %></td>
+        <td><%= song.song_path %></td>
+        <td><button id="" type="button" class="btnShowSong btn btn-default">Show</button></td>
+        <td><button id="" type="button" class="btnEditSong btn btn-default">Edit</button></td>
+        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+    
+<button id="btnNewSong" type="button" class="btn btn-default">New Song</button>
