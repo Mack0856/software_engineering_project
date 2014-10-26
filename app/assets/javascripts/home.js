@@ -5,7 +5,6 @@ $( document ).ready(function() {
   $.when(songs).done(function(songs){
     var html = "";
     $.each(songs,function(index,value){
-      value = $.parseJSON(value);
       html += '<li data-songid="'+value.id+'">'
                     +'<div class="album_art">'
                     +   '<img src="/assets/'+value.art_filename+'" data-file="'+value.filename+'"/>'
