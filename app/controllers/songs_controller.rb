@@ -67,6 +67,12 @@ class SongsController < ApplicationController
   def update
     respond_to do |format|
       if @song.update(song_params)
+        song_uploader = SongUploader.new
+        song_uploader.store!(params[:song][:file])
+        art_uploader = ArtUploader.new
+        art_uploader.store!(params[:song][:art])
+        @song.file = song_uploader.file
+        @song.art = art_uploader.file
         format.html { redirect_to @song, notice: 'Song was successfully updated.' }
         format.json { render :show, status: :ok, location: @song }
       else
