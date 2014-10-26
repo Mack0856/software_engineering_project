@@ -67,6 +67,10 @@ $( document ).ready(function() {
     window.location.replace("/logout");
   });
 
+  $("#btnNavAdmin").on('click',function(){
+    window.location.replace("/songs");
+  });
+
 
   if($('#stage').length > 0){
     $('#stage').ready(function(){

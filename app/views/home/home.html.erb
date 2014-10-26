@@ -9,8 +9,15 @@
         <a id="brandHelloMusic" class="navbar-brand active" href="#">HelloMusic</a>
       </div>
       
+     
+
       <ul class="nav pull-right" style="padding-right:30px; padding-top:8px;">
         <li><button id="btnLogout" class="btn btn-default" >Logout</button></li>
+
+         <% if user.permissions == "administrator" %>
+        <li><button id="btnNavAdmin" class="btn btn-default" >Admin</button></li>
+        <% end %>
+
       </ul>
     </div><!-- /.container -->
 
@@ -31,6 +38,11 @@
           
           <!-- SCREEN ONE -->
           <div id="loginAbout" data-scene="0" data-layer="0">
+        
+          </div>
+          
+          <!-- SCREEN TWO -->
+          <div  id="loginWelcome"  data-scene="1" data-layer="0">
             <div id="lib" class="container"> 
             <div class="row">
               <h1> Library </h1>
@@ -44,12 +56,7 @@
               </div>
               <div id="lib_results" class="row">
               </div>
-            </div>
-          </div>
-          
-          <!-- SCREEN TWO -->
-          <div  id="loginWelcome"  data-scene="1" data-layer="0">
-                          most played song: xxx    
+            </div> 
           </div>
           
           <!-- SCREEN THREE -->
