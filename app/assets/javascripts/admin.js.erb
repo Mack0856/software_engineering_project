@@ -1,17 +1,36 @@
 $(document).ready(function(){
 
-	//'songs'
-
 	$('#navAdminHome').click(function(){
-		//$('#mainContainer').html("You are an admin");		
+
+		clearContainers();
+	    //$("#songsContainer").css('display', 'block');
 	});
 
 	$('button[data-nav="admin-reports"]').click(function(){
-		// $('#mainContainer').html(" render partial: ");
+
+		clearContainers();		
+		$("#reportsContainer").css('display', 'block');
+	});
+
+	$('button[data-nav="admin-manage-users"]').click(function(){
+		clearContainers();
+		$('#mainContainer').load("users");
+		$("#reportsContainer").css('display', 'block');
+
 	});
 
 	$('button[data-nav="admin-manage-songs"]').click(function(){
-		$('#mainContainer').load( "songs" );
+		clearContainers();
+		$('#songs').load( "songs" );
 	});
 
-})
+});
+
+function clearContainers (){
+
+	$("#landingContainer").css('display', 'none');
+	$("#songsContainer").css('display', 'none');
+	$("#reportsContainer").css('display', 'none');
+	$("#usersContainer").css('display', 'none');
+
+}

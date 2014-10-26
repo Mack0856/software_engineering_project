@@ -8,14 +8,27 @@
           <li><button class="btn btn-default" data-nav="admin-manage-songs" >Manage Songs</button></li>
         </ul>
         <ul  class="nav pull-right" style="padding-right:10px; padding-top:8px;">
-          <li><button class="btn btn-default" data-nav="admin-reports">Reports</button></li>
+          <li><button class="btn btn-default" data-nav="admin-reports">Reporting</button></li>
+        </ul>
+        <ul class="nav pull-right" style="padding-left:30px; padding-top:8px;">
+          <li><button class="btn btn-default" data-nav="admin-manage-users" >Manage Users</button></li>
         </ul>
       </div>
     </div><!-- /.navbar-inner -->
   </nav>
 </div><!-- /.navbar -->
 <div class="row">
-  <div id="mainContainer" class="container">
+  <div id="mainContainer" class="container" >
+    <div id="songsContainer" style="display:block;">
+    </div>
+    <div id="landingContainer" style="display:block;">
+      <%= render partial: 'admin_landing' %>
+    </div>
+    <div id="reportsContainer" style="display:none;">
+      <%= render partial: 'reports' %>
+    </div>
+    <div id="usersContainer" style="display:none;">
+    </div>
   </div>
 </div>
 <div class="row">
