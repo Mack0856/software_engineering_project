@@ -25,6 +25,9 @@ $(document).ready(function(){
           200:function(response){
             window.location = "/home?user_i="+response.id+"";
           },
+          401:function(response){
+            alert("Incorrect email or password");
+          },
           403:function(response){
             alert("Incorrect email or password");
           }
