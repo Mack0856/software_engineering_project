@@ -41,26 +41,7 @@
               </div>
               <div id="lib_results" class="row">
                 <ul>
-                  <li>
-                    <div class="album_art">
-                      <img src="/assets/art.png" />
-                  </div>
-                  </li>
-                  <li>
-                    <div class="album_info">
-                        <ol>
-                          <li><label>Track Name: </label></li>
-                          <li><label>Artist: </label></li>
-                          <li><label>Album: </label></li>
-                          <li><label>Length: </label></li>
-                        </ol>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="album_options">
-                      <a href="#" > Download </a>
-                    </div>
-                  </li>
+                
                </ul>
               </div>
             </div>
@@ -114,15 +95,7 @@
 </div>
 
 <script>
-  var  songs = (function(){$.ajax({
-                                  type: "GET",
-                                  url: "/api/songs",
-                                  statusCode:{
-                                    200:function(response){
-                                                            return response
-                                    }
-                           }})
-                })()
+ 
 </script>
 <!-- SCREENS END -->
 
