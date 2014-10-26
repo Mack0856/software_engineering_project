@@ -24,7 +24,11 @@ Rails.application.routes.draw do
   #get '/admin/reports', to: 'admin#reports'
   #get '/admin/admin_landing', to: 'admin#admin_landing'
 
+  get '/songs_json', to: "song#songs_json"
+
   post '/login', to: 'login#login'
+
+  get '/api/songs', to: 'api/songs#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,9 +1,24 @@
 require 'json'
 class SongSerializer
 	def serialize(songs)
-		serialized_songs = {}
+		serialized_songs = []
 		songs.each do |song|
-			serialized_songs.merge!({ id: song.id, song: song.to_json })
+			song_hash = {
+				id: song.id,
+				title: song.title,
+				artist: song.artist,
+				albumn: song.album,
+				year: song.year,
+				last_played: song.last_played,
+				last_download: song.last_download,
+				total_plays: song.total_plays,
+				total_downloads: song.total_downloads,
+				path: song.file.file.path,
+				filename: song.file.file.filename,
+				art_filename: song.art.file.filename,
+				art_path: song.art.file.path
+			}
+			serialized_songs << song_hash.to_json
 		end
 		serialized_songs
 	end
