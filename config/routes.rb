@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   get 'songs/download/:id', to: 'songs#download'
   get 'songs/update_listens/:id', to: 'songs#update_listens'
+
+  get '/report', to: 'report#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
