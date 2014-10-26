@@ -2738,6 +2738,7 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  color: black;
 }
 .btn:focus,
 .btn:active:focus,
@@ -2769,7 +2770,8 @@ fieldset[disabled] .btn {
   opacity: .65;
 }
 .btn-default {
-  color: #333;
+  color:black;
+
   background-color: #fff;
   border-color: #ccc;
 }

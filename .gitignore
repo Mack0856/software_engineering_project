@@ -19,3 +19,7 @@ app/assets/images/test2.mp3
 app/assets/images/01_Divinity__feat._Amy_Millan_.mp3
 app/assets/images/e___s.PNG
 app/assets/images/11_Fellow_Feeling.mp3
+
+*.jpg
+*.mp3
+*.png
