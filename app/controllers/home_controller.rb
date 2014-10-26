@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   	if request.post?
   		user = User.create(params[:user])
   		if user.persisted?
-        session[:user_id] = user.id
+        # session[:user_id] = user.id
   			render :json, status: :ok
   		else
   			render :json, status: :unprocessable_entity
@@ -18,12 +18,12 @@ class HomeController < ApplicationController
   end
 
   def home
-    if session[:user]
-      song_serializer = SongSerializer.new
-      @serialized_songs = song_serializer.serialize(Song.all).to_json
-    else
-      redirect_to :root
-    end
+    # if session[:user]
+    #   song_serializer = SongSerializer.new
+    #   @serialized_songs = song_serializer.serialize(Song.all).to_json
+    # else
+    #   redirect_to :root
+    # end
   end
 
   def subscribe
