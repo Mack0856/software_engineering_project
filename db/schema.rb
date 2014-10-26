@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026103456) do
+ActiveRecord::Schema.define(version: 20141026191853) do
 
   create_table "invoices", force: true do |t|
     t.integer  "total_cost"
@@ -71,6 +71,11 @@ ActiveRecord::Schema.define(version: 20141026103456) do
     t.boolean  "subscribed"
     t.integer  "total_downloads"
     t.integer  "total_listens"
+    t.string   "subscription_plan"
+    t.boolean  "suspended"
+    t.date     "suspended_on"
+    t.date     "next_payment_on"
+    t.boolean  "paid"
   end
 
 end
