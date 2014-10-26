@@ -22,6 +22,13 @@ height: 100%;
 position:relative;
 }
 
+div#loginAbout h1 {
+  font-family: BlueJulyB;
+  font-size: 5em;
+  margin: 0.67em 0;
+  color: white;
+}
+
 #brandHelloMusic{
   font-family: BlueJulyB;
   font-size: 33px;
@@ -85,7 +92,23 @@ html::-webkit-scrollbar {
   z-index:999;
 }
 
+div#news_wrap {
+  position: relative;
+  height: 50%;
+  width: 50%;
+  left: 400px;
 
+ 
+  color:white;
+  }
+div#news_wrap div{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4%;
+}
+
+div#news_blob {
+  text-align: center;
+}
 
 /* LOGIN SCREEN */
 #home{

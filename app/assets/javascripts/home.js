@@ -8,11 +8,14 @@ $( document ).ready(function() {
   var activeScene = 1;
   var songs = $.ajax({type: "GET",url: "/api/songs"});
   $.when(songs).done(function(songs){
-    var self = this;
-    songsObj.songs = songs; 
-    var html = "";
+    var self                = this;
+        html                = " ",
+        recentlyAdded_html  = " ",
+        mostplayed_html     = " ";
+        songsObj.songs = songs;
 
     $.each(songs,function(index,value){
+      
       html += '<ul><li data-songid="'+value.id+'">'
                     +'<div class="album_art">'
                     +   '<img src="/assets/'+value.art_filename+'" data-file="'+value.filename+'" data-id="'+value.id+'"/>'
@@ -33,6 +36,9 @@ $( document ).ready(function() {
               +  '<a target="_blank" href="/songs/download/'+value.id+'" > Download </a>'
              + '</div>'
             +'</li></ul>';
+
+
+
     })
       $('#lib_results').append(html);
   })
@@ -195,6 +201,8 @@ $( document ).ready(function() {
           $('#lib_results').append("No Results");
         }
   })
+
+  
 
 });
 

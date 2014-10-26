@@ -21,7 +21,7 @@
 </head>
 <body style="padding-top: 70px;">
 <% if flash[:notice] %>
-    <div class="alert alert_notice" id="flash_notice"><%= flash[:notice] %></div>
+    <div class="alert alert-danger" id="flash_notice"><%= flash[:notice] %></div>
 <% end %>
   <%= yield %>
 </body>
