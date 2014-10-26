@@ -196,3 +196,9 @@ html::-webkit-scrollbar {
 .edit_profile_container{
   left:20;
 }
+
+input[type="text"]{
+  font-size: 22px;
+  color:black;
+
+}
