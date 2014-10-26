@@ -1,5 +1,6 @@
 <% @body_class = 'index' %>
-<%= @serialized_songs %>
+<% @serialized_songs %>
+<% user = User.find(session[:user_id]) %>
 <div class="row">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     
@@ -20,7 +21,7 @@
 
 
 <!-- SCREENS -->
-
+<% unless user.subscribed.nil? %>
   <div class="container">
     <div id="home" class="col-xs-12">
         <div id="sidebarLeft">
@@ -102,18 +103,20 @@
       </div>
     </div>
   </div>
-
 </div>
-<script>
-   window.songs = $.parseJSON(<%= @serialized_songs %>);
 
+<!-- PLAYER END-->
+<% else %>
+   <%= render partial: 'subscribe' %>
+<% end %>
+</div>
+
+<script>
+  window.songs = $.ajax({type: "GET", url: "/songs/songs_json"});
 </script>
+<!-- SCREENS END -->
 
 <!-- <div id="gradient"></div> -->
-
-
-
-
 
 <!-- New Nav Incmpete
 

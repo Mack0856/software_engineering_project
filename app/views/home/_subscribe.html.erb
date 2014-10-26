@@ -1,0 +1,29 @@
+<% user = User.find(session[:user_id]) %>
+<div id="subcribe_landing" class="container-fluid">
+	<div id="fakeCardContainer">
+		<h1>Welcome <%= user.first_name %>!</h1>
+	<p>To continue using the service, please enter your card information to subscribe.</p><br>
+	<p>Billing will occur quarterly, unless your total number of listens and downloads go over 50, then billing will occur monthly.</p><br>
+		Card Number: <input type="text" value="4111-1111-1111-1111"><br>
+		CVC Number: <input type="text" value="111"><br>
+		Expiry Date: <input type="text" value="01/20"><br>
+		<input type="submit" label="submit" id="subscribeSubmit">
+	</div>
+</div>
+
+<script>
+
+	$("#subscribeSubmit").click(function(){
+		$.ajax({
+			type: "GET", 
+			url: "home/subscribe", 
+			data: { 
+				id: <%= user.id %> 
+			}, statusCode: {
+				200: function() {
+					window.location = "/home";
+				}
+			},
+		});
+	});
+</script>

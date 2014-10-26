@@ -19,7 +19,7 @@
 
   <tbody>
     <% @songs.each do |song| %>
-      <tr>
+      <tr id="song-<%= song.id %>" >
         <td><%= song.title %></td>
         <td><%= song.artist %></td>
         <td><%= song.album %></td>
@@ -30,8 +30,8 @@
         <td><%= song.total_plays %></td>
         <td><%= song.total_downloads %></td>
         <td><%= song.song_path %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
+        <td><button id="asdasd" type="button" class="btnShowSong btn btn-default">Show</button></td>
+        <td><button type="button" class="btnEditSong btn btn-default">Edit</button></td>
         <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

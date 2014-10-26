@@ -30,6 +30,5 @@
 
 //= require jplayer.playlist.min.js
 
-//= require admin.js
 //= require landing.js
 //= require home.js
