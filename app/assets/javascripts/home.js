@@ -33,6 +33,7 @@ $( document ).ready(function() {
     $('#loginAbout').css("background-image","url('"+imgSRC.src+"')");
   })
 
+
 $('body').on('click','.album_art img' ,function(){
    var song_play = '/assets/' + $(this).data("file");
      $("#jquery_jplayer_1").jPlayer("setMedia",{ mp3: song_play }).jPlayer("play");
