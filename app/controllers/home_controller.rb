@@ -3,17 +3,28 @@ require 'json'
 class HomeController < ApplicationController
   def register
   	if request.post?
-  		user = User.create(params[:user])
+  		user = User.create(user_params)
   		if user.persisted?
-        # session[:user_id] = user.id
-  			render :json, status: :ok
+        user.permissions = "basic"
+        user.save!
+        session[:user_id] = user.id
+  			redirect_to home_path, notice: "You have successfully signed up!"
   		else
-  			render :json, status: :unprocessable_entity
+  			redirect_to '/', notice: "An error has occurred"
   		end
   	end
   end
 
   def home
+    if session[:user_id]
+    else
+      redirect_to "/", notice: "Please log in"
+    end
+  end
+
+  def logout
+    reset_session
+    render json: "", status: :ok
   end
 
   def subscribe
@@ -21,7 +32,11 @@ class HomeController < ApplicationController
     if user
       user.subscribed = true
       user.save
-      render :json, status: :ok
+      render json: "", status: :ok
     end
+  end
+
+  def user_params
+    params.permit(:first_name, :last_name, :email, :password, :date_of_birth, :gender)
   end
 end

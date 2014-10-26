@@ -20,7 +20,7 @@
 
 
 <!-- SCREENS -->
-<!-- <%# unless user.subscribed.nil? %> -->
+<% unless user.subscribed.nil? %>
 
   <div class="container">
     <div id="home" class="col-xs-12">
@@ -110,7 +110,9 @@
 </div>
 
 <!-- PLAYER END-->
-<!-- <% else %> -->
+<% else %>
+  <%= render partial: 'subscribe' %>
+<% end %>
 </div>
 
 <script>

@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 
   get '/api/songs', to: 'api/songs#index'
 
+  get '/logout', to: 'home#logout'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

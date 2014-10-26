@@ -7,56 +7,39 @@
 
     <h1>Register for Unlimited Access</h1>
 
-    <%= form_tag(action: 'register', method: 'post', controller: 'home') do %>
+    <%= form_tag(action: 'register', method: 'post', controller: 'home', multipart: true) do %>
 
       <div class="field form-group">
-        <label for="email">Email</label> <input
-          type="email"
-          class="form-control"
-          id="email"
-          placeholder="Email Address"
-          data-sign="email">
+        <label for="email">Email</label> 
+        <%= text_field_tag "email", "", class: "form-control" %>
         <p class="help-block">This will be your username for the
           HelloMusic application</p>
       </div>
       <div class="field form-group">
 
-        <label for="password">Password</label> <input
-          type="password"
-          class="form-control"
-          id="password"
-          placeholder="Password"
-          data-sign="password">
+        <label for="password">Password</label> 
+        <%= password_field_tag "password", "", class: "form-control" %>
         <p class="help-block">Please use a strong password to keep your
           account secure</p>
       </div>
       <div class="field">
-        <label>First name</label> <input
-          type="text"
-          id="firstName"
-          data-sign="first_name"
-          class="form-control">
+        <label>First name</label> 
+        <%= text_field_tag "first_name", "", class: "form-control" %>
       </div>
       <div class="field">
-        <label>Last name</label> <input
-          type="text"
-          id="lastName"
-          data-sign="last_name"
-          class="form-control">
+        <label>Last name</label> 
+        <%= text_field_tag "last_name", "", class: "form-control" %>
       </div>
       <div class="field">
-        <label>Date of birth</label> <input
-          type="text"
-          id="dob"
-          data-sign="date_of_birth"
-          class="form-control">
+        <label>Date of birth</label>
+         <%= text_field_tag "date_of_birth", "", class: "form-control" %>
       </div>
       <div class="field form-group">
         <label>Gender</label>
         <div class="radio">
           <label> <input
             type="radio"
-            name="optionsRadios"
+            name="gender"
             id="gender"
             value="male"
             checked=""> Male
@@ -65,7 +48,7 @@
         <div class="radio">
           <label> <input
             type="radio"
-            name="optionsRadios"
+            name="gender"
             id="optionsRadios2"
             value="option2"> Female
           </label>
