@@ -18,7 +18,7 @@ class SongSerializer
 				art_filename: song.art.file.filename,
 				art_path: song.art.file.path
 			}
-			serialized_songs << song_hash.to_json
+			serialized_songs << song_hash
 		end
 		serialized_songs
 	end

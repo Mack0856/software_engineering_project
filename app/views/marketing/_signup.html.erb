@@ -7,7 +7,7 @@
 
     <h1>Register for Unlimited Access</h1>
 
-    <form role="form">
+    <%= form_tag(action: 'register', method: 'post', controller: 'home') do %>
 
       <div class="field form-group">
         <label for="email">Email</label> <input
@@ -33,18 +33,21 @@
       <div class="field">
         <label>First name</label> <input
           type="text"
+          id="firstName"
           data-sign="first_name"
           class="form-control">
       </div>
       <div class="field">
         <label>Last name</label> <input
           type="text"
+          id="lastName"
           data-sign="last_name"
           class="form-control">
       </div>
       <div class="field">
         <label>Date of birth</label> <input
           type="text"
+          id="dob"
           data-sign="date_of_birth"
           class="form-control">
       </div>
@@ -54,8 +57,8 @@
           <label> <input
             type="radio"
             name="optionsRadios"
-            id="optionsRadios1"
-            value="option1"
+            id="gender"
+            value="male"
             checked=""> Male
           </label>
         </div>
@@ -69,9 +72,9 @@
         </div>
       </div>
       <div class="actions">
-        <button class="btn btn-large btn-primary">Sign up!</button>
+        <input type="submit" class="btn btn-large btn-primary" id="btnSignup" value="Sign up!"/>
       </div>
-    </form>
+    <% end %>
   </div>
 
       <div class="jumbotron">

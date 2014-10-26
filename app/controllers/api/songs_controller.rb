@@ -5,7 +5,9 @@ class Api::SongsController < ApplicationController
   # GET /songs.json
   def index
     @songs = Song.all
-    render json: @songs
+    serializer = SongSerializer.new
+    serialized_songs = serializer.serialize(@songs)
+    render json: serialized_songs
   end
 
   # GET /songs/1
