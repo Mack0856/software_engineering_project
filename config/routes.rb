@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/home/welcome', to: 'home#welcome'
   get '/home/music', to: 'home#music'
   get '/home/subscribe', to: 'home#subscribe'
-  get '/register', to: 'home#register'
+  post '/register', to: 'home#register'
 
   get '/admin/', to: 'admin#index'
   get '/admin/admin_landing', to: 'admin#admin_landing'
