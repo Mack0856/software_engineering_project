@@ -30,6 +30,8 @@ class SongsController < ApplicationController
       if @song.save
         uploader = SongUploader.new
         uploader.store!(params[:song][:file])
+        @song.file = uploader.file
+        @song.save!
         format.html { redirect_to @song, notice: 'Song was successfully created.' }
         format.json { render :show, status: :created, location: @song }
       else
