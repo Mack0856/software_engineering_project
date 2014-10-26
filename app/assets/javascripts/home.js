@@ -64,6 +64,7 @@ $( document ).ready(function() {
   });
 
   $("#btnLogout").on('click',function(){
+    $.ajax({type: "GET", url: "/logout"});
     window.location.replace("/");
   });
 
