@@ -94,7 +94,7 @@ $( document ).ready(function() {
 
 
   $('body').on('keyup','input[name="searchBar"]',function(){
-    var inputText     = $("input[name='searchBar']").val(),
+    var inputText     = ($("input[name='searchBar']").val()).toLowerCase(),
         title_check   = $("input[name='title_check']:checked").length,
         artist_check  = $("input[name='artist_check']:checked").length,
         album_check   = $("input[name='album_check']:checked").length,
@@ -105,9 +105,13 @@ $( document ).ready(function() {
         $('#lib_results').empty();
         if($(inputText.length > 0)){
           $.each(songs,function(index,value){
+            value.title =  (value.title).toLowerCase();
+            value.artist = (value.artist).toLowerCase();
+            value.albumn = (value.albumn).toLowerCase(); 
+
             value.found = 0;
             if(title_check  > 0){
-                if(((value.title).toLowerCase().indexOf(inputText)) > -1){
+                if(((value.title).indexOf(inputText)) > -1){
                
                   html += '<ul><li data-songid="'+value.id+'">'
                                       +'<div class="album_art">'
@@ -133,7 +137,7 @@ $( document ).ready(function() {
                 }
             }
             if(artist_check > 0 && value.found !== 1){
-            if(((value.artist).toLowerCase().indexOf(inputText)) > -1){
+            if(((value.artist).indexOf(inputText)) > -1){
                value.found = 1;
                   html += '<ul><li data-songid="'+value.id+'">'
                                       +'<div class="album_art">'
@@ -158,7 +162,7 @@ $( document ).ready(function() {
                 }
             }
             if(album_check  > 0 && value.found !== 1){
-                if(((value.albumn).toLowerCase().indexOf(inputText)) > -1){
+                if(((value.albumn).indexOf(inputText)) > -1){
                   value.found = 1;
                   html += '<ul><li data-songid="'+value.id+'">'
                                       +'<div class="album_art">'
