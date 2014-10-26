@@ -1,37 +1,44 @@
 $( document ).ready(function() {
-  var activeScene = 1;
+  var activeScene = 1,
+      songs = (function(){$.ajax({
+                                  type: "GET",
+                                  url: "/songs/songs_json",
+                                  statusCode:{
+                                    200:function(response){
+                                                            return response
+                                    }
+                           }})
+                })()
 
-$('.album_art img').mouseenter(function(){
-  var imgSRC = $(this)[0];
-  $('#loginAbout').css("background-image","url('"+imgSRC.src+"')");
-})
-$('.album_art img').mouseleave(function(){
-  var imgSRC = $(this)[0];
-  $('#loginAbout').css("background-image","url('/assets/pic1.jpg')  ");
-})
+                
+  $('.album_art img').mouseenter(function(){
+    var imgSRC = $(this)[0];
+    $('#loginAbout').css("background-image","url('"+imgSRC.src+"')");
+  })
+  $('.album_art img').mouseleave(function(){
+    var imgSRC = $(this)[0];
+    $('#loginAbout').css("background-image","url('/assets/pic1.jpg')  ");
+  })
   
 
   $("#brandHelloMusic").on('click',function(){
-      $('#mainContainer').load( "home/welcome" );
-    });
+      $('#mainContainer').load( "home/welcome");
+  });
 
-    $("#navMusic").on('click',function(){
+  $("#navMusic").on('click',function(){
+    $('#mainContainer').load( "home/music" );
+  });
 
-      $('#mainContainer').load( "home/music" );
+  $("#btnLogout").on('click',function(){
+    window.location.replace("/");
+  });
 
-    });
+  $('.right').click(function(){
+    if(activeScene == 2){
+      
+     }
+  })
 
-    $("#btnLogout").on('click',function(){
-      window.location.replace("/");
-    });
-
-    //$('#mainContainer').load( "home/welcome" );
-
-$('.right').click(function(){
-  if(activeScene == 2){
-    
-   }
-})
   if($('#stage').length > 0){
     $('#stage').ready(function(){
       $('#home').saucySlider({
@@ -45,15 +52,15 @@ $('.right').click(function(){
     });
   }
 
-        var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
-        {
-          mp3: "http://localhost:3000/assets/test.mp3"
-        }, {
-          cssSelectorAncestor: "#cp_container_1",
-          swfPath: "assets",
-          supplied: "mp3",
-          wmode: "window"
-        });
+  var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
+  {
+    mp3: "http://localhost:3000/assets/test.mp3"
+  }, {
+    cssSelectorAncestor: "#cp_container_1",
+    swfPath: "assets",
+    supplied: "mp3",
+    wmode: "window"
+  });
 });
 
     // $("#jquery_jplayer_1").jPlayer("setMedia",{ mp3: 'http://localhost:3000/assets/01_Rock_N__Roll__Will_Take_You_to_the_Mountain_.mp3'}).jPlayer("play"); CHANGE TRACK
